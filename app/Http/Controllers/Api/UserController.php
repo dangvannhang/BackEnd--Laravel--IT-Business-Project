@@ -20,12 +20,12 @@ class UserController extends Controller
         return response()->json($user);
     }
     
-    public function login(LoginRequest $request) {
+    public function login(Request $request) {
         if(Auth::attempt([
-            'email' => $request->email,
+            'username' => $request->username,
             'password' => $request->password
         ])){
-            $user = User::whereEmail($request->email)->first();
+            $user = User::where('username',$request->username)->first();
             $user->token = $user->createToken('App')->accessToken;
 
             return response()->json($user);

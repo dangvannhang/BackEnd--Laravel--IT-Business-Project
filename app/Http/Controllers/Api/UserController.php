@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 class UserController extends Controller
 {
-    public function register(RegisterRequest $request) {
+    public function register(Request $request) {
         $user = new User;
         $user->fill($request->all());
         $user->password = Hash::make($request->password);

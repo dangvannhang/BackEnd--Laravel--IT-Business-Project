@@ -21,8 +21,7 @@
   2.10 Create router register
 
 3. Doing
-  - 
-
+  - fix bug at register
 
 4. Fixed
   4.1 L

@@ -9,6 +9,8 @@ use App\Http\Requests\LoginRequest;
 use App\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
+
+
 class UserController extends Controller
 {
     public function register(Request $request) {

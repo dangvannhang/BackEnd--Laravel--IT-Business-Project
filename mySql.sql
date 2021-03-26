@@ -40,7 +40,6 @@ create table users(
     passwordd varchar(255),
     id_roles int,
     phone numeric,
-    namee varchar(50),
     token varchar(255),
 	create_date datetime,
     update_date datetime,

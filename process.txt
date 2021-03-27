@@ -11,9 +11,9 @@
 
 2. Done 
   2.1 register, login with authenticate 
-
+  2.2 validate cho users khi register
 3. Doing
-  - validate cho username
+  
 
 4. Fixed
   4.1 L

@@ -78,5 +78,19 @@ create table posts(
 	foreign key(id_photographer) references users(id)
 );
 
+create table main_style(
+	id int auto_increment,
+    namee varchar(50),
+    descr varchar(255),
+    primary key(id)
+);
+create table follow_styles(
+	id int auto_increment,
+    id_user int,
+    follow_styles varchar(500),
+    primary key(id),
+    foreign key(id_user) references users(id)
+);
+
 
 

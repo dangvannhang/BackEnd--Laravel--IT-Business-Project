@@ -1,0 +1,2 @@
+- một style cũng có thể có nhiều người theo dõi,
+- một người cũng có thể theo dõi nhiều style

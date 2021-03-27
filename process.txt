@@ -13,7 +13,7 @@
   2.1 register, login with authenticate 
   2.2 validate cho users khi register
 3. Doing
-  
+  - tạo các bảng mới về main_styles, follow_styles và model cho chúng
 
 4. Fixed
   4.1 L

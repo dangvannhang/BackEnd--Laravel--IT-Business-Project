@@ -51,18 +51,28 @@ create table booking(
 	id int auto_increment,
     id_user int,
     id_photographer int,
-    created_time datetime,
     id_combo int,
     is_cancel boolean,
-    id_voucher varchar(50),
+    id_voucher int,
     create_date datetime,
     update_date datetime,
     primary key(id),
     foreign key(id_user) references users(id),
     foreign key(id_photographer) references users(id),
-    foreign key(id_combo) references combo(id),
+	foreign key(id_combo) references combo(id),
     foreign key(id_voucher) references voucher(id)
     
+);
+
+create table booking_detail(
+	id int auto_increment,
+    id_booking int,
+    address varchar(200),
+    start_time datetime,
+    end_time datetime,
+    price float,
+    primary key(id),
+    foreign key(id_booking) references booking(id)
 );
 
 
@@ -91,6 +101,7 @@ create table follow_styles(
     primary key(id),
     foreign key(id_user) references users(id)
 );
+
 
 
 

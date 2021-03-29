@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUsersTable extends Migration
+class CreateComboTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,12 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('combo', function (Blueprint $table) {
             $table->id();
-            $table->string('username');
-            $table->string('password');
-            $table->string('id_role');
-            $table->string('phone');
-            $table->string('email')->unique();
-            $table->rememberToken();
+            $table->string('name_style');
+            $table->string('description');
+            $table->string('image');
+            $table->float('price');
             $table->timestamps();
         });
     }
@@ -32,6 +30,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('combo');
     }
 }

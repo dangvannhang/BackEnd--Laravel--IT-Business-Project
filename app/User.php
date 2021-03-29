@@ -31,7 +31,7 @@ class User extends Authenticatable
     ];
 
     protected $primarykey ='id';
-    protected $table ='users';
+    protected $table ='user';
 
 
     public function role()

@@ -30,9 +30,9 @@ class PostController extends Controller
     }
 
 // update the post
-    public function update(Request $request, Post $posts)
+    public function update(Request $request, Post $post)
     {
-        $update_post = $posts->update(
+        $update_post = $post->update(
             $request->only(['title', 'content', 'image','style_id'])
         );
 

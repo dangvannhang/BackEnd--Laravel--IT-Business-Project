@@ -34,9 +34,9 @@ class User extends Authenticatable
     protected $table ='users';
 
 
-    public function roles()
+    public function role()
     {
-        return $this->hasOne('App\Roles','id_role');
+        return $this->hasOne('App\Role','id_role');
     }
 
 

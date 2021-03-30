@@ -16,7 +16,7 @@ class CreateFollowStyleTable extends Migration
         Schema::create('follow_style', function (Blueprint $table) {
             $table->id();
             $table->foreignId('id_user');
-            $table->text('follow_styles');
+            $table->foreignId('id_style');
             $table->timestamps();
         });
     }
@@ -31,3 +31,5 @@ class CreateFollowStyleTable extends Migration
         Schema::dropIfExists('follow_style');
     }
 }
+
+

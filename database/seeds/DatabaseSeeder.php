@@ -15,17 +15,19 @@ class DatabaseSeeder extends Seeder
             //
             UserSeeder::class,
             //
-            // RoleSeeder::class,
+            RoleSeeder::class,
             //
-            // VoucherSeeder::class,
-
-            // PostSeeder::class,
-            // FollowStyleSeeder::class,
-            // MainStyleSeeder::class,
+            VoucherSeeder::class,
             //
-            // ComboSeeder::class
-            // BookingSeeder::class,
-            // StyleSeeder::class,
+            PostSeeder::class,
+            // 
+            FollowStyleSeeder::class,
+            //
+            MainStyleSeeder::class,
+            //
+            ComboSeeder::class,
+            // 
+            BookingSeeder::class,
 
         ]);
     }

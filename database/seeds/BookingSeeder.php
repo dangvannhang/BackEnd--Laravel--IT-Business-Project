@@ -15,6 +15,88 @@ class BookingSeeder extends Seeder
     public function run()
     {
         //
-        DB::table('booking')
+        DB::table('booking')->insert([
+            [
+                'id_user' => 2,
+                'id_photographer' => 7,
+                'id_combo' => 2,
+                'is_cancel' => false,
+                'code_voucher' => '',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'id_user' => 3,
+                'id_photographer' => 10,
+                'id_combo' => 4,
+                'is_cancel' => false,
+                'code_voucher' => '',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'id_user' => 4,
+                'id_photographer' => 9,
+                'id_combo' => 1,
+                'is_cancel' => false,
+                'code_voucher' => '',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'id_user' => 5,
+                'id_photographer' => 8,
+                'id_combo' => 4,
+                'is_cancel' => false,
+                'code_voucher' => '',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'id_user' => 6,
+                'id_photographer' => 7,
+                'id_combo' => 5,
+                'is_cancel' => false,
+                'code_voucher' => '',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'id_user' => 3,
+                'id_photographer' => 8,
+                'id_combo' => 1,
+                'is_cancel' => false,
+                'code_voucher' => '',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'id_user' => 5,
+                'id_photographer' => 9,
+                'id_combo' => 2,
+                'is_cancel' => false,
+                'code_voucher' => '',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'id_user' => 6,
+                'id_photographer' => 10,
+                'id_combo' => 3,
+                'is_cancel' => false,
+                'code_voucher' => '',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'id_user' => 2,
+                'id_photographer' => 9,
+                'id_combo' => 5,
+                'is_cancel' => false,
+                'code_voucher' => '',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+        ]);
     }
 }

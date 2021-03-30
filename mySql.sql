@@ -96,9 +96,10 @@ create table main_style(
 create table follow_styles(
 	id int auto_increment,
     id_user int,
-    follow_styles varchar(500),
+    id_style int ,
     primary key(id),
-    foreign key(id_user) references users(id)
+    foreign key(id_user) references users(id),
+    foreign key(id_style) references main_style(id)
 );
 
 create table wishlist(

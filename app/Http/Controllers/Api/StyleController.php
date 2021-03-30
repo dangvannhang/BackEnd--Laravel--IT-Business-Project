@@ -16,18 +16,18 @@ class StyleController extends Controller
 // add new style
   public function store(Request $request)
   {
-    $styles = Style::create([
+    $style = Style::create([
       'image' => $request->image,
       'name' => $request->name,
       'price' => $request->price,
     ]);
-      return response()->json(['data'=>$styles]);
+      return response()->json(['data'=>$style]);
   }
 
 // update the Style
-  public function update(Request $request, Style $styles)
+  public function update(Request $request, Style $style)
   {
-    $update_style = $styles->update(
+    $update_style = $style->update(
       $request->only(['image', 'name', 'price'])
     );
     return response()->json([

@@ -18,7 +18,7 @@ class PostController extends Controller
 // post a new story
     public function post(Request $request)
     {
-        $posts = Post::create([
+        $post = Post::create([
             'user_id' => $request->user_id,
             'title' => $request->title,
             'content' => $request->content,
@@ -26,7 +26,7 @@ class PostController extends Controller
             'style_id' => $request->style_id,
             'created_at'=>Carbon::now()->format('Y-m-d H:i:s')
                 ]);
-        return response()->json(['data'=>$posts]);
+        return response()->json(['data'=>$post]);
     }
 
 // update the post

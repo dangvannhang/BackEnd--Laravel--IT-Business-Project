@@ -10,9 +10,9 @@ use App\Style;
 class PostController extends Controller
 {
 // Show all the posts
-    public function show()
-    {
-        return response()->json(Post::all(),200); 
+
+    public function index() {
+        $post= Post::latest()->get();
     }
 
 // post a new story
@@ -25,7 +25,7 @@ class PostController extends Controller
             'image'=>$request->image,
             'style_id' => $request->style_id,
             'created_at'=>Carbon::now()->format('Y-m-d H:i:s')
-                ]);
+        ]);
         return response()->json(['data'=>$post]);
     }
 

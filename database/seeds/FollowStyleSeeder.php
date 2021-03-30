@@ -12,5 +12,37 @@ class FollowStyleSeeder extends Seeder
     public function run()
     {
         //
+        DB::table('follow_style')->insert([
+            [
+                'id_user' =>,
+                'follow_style' =>
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'id_user' =>,
+                'follow_style' =>
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'id_user' =>,
+                'follow_style' =>
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'id_user' =>,
+                'follow_style' =>
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'id_user' =>,
+                'follow_style' =>
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+        ]);
     }
 }

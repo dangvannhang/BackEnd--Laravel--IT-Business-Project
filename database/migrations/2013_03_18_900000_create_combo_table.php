@@ -18,7 +18,7 @@ class CreateComboTable extends Migration
             $table->string('name_style');
             $table->string('description');
             $table->string('image');
-            $table->float('price');
+            $table->bigInteger('price');
             $table->timestamps();
         });
     }

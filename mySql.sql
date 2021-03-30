@@ -12,7 +12,6 @@ create table roles(
 );
 create table voucher(
 	id int auto_increment,
-    namee varchar(50),
     codee varchar(50),
     descr varchar(255),
     count int,

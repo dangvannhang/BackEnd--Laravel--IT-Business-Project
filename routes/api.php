@@ -31,7 +31,7 @@ Route::post('/register','Api\UserController@register');
 Route::post('/login','Api\UserController@login');
 // checked
 Route::get('/info','Api\UserController@userInfo')->middleware('auth:api');
-
+// Route::get('/checkLogin','Api\UserController@checkLogin');
 
 //Posts
 

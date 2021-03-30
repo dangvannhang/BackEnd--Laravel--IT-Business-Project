@@ -39,5 +39,23 @@ class UserController extends Controller
         return response()->json($request->user('api')); 
     }
 
+    // public function checkLogin() {
+
+    //     if (Auth::check()) {
+            
+    //         return response()->json(['status'=>'authenticated']);
+    //     }
+    //     return response()->json(['status'=>'unauthenticated']);
+    // }
+
+
+    public function photographer_popular() {
+
+
+    }
+    public function photographer_recommendation() {
+
+        
+    }
     
 }

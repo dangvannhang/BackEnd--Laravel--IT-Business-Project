@@ -21,7 +21,7 @@ class BookingSeeder extends Seeder
                 'id_photographer' => 7,
                 'id_combo' => 2,
                 'is_cancel' => false,
-                'code_voucher' => '',
+                'id_voucher' => 1,
                 'created_at' => now(),
                 'updated_at' => now()
             ],
@@ -30,7 +30,7 @@ class BookingSeeder extends Seeder
                 'id_photographer' => 10,
                 'id_combo' => 4,
                 'is_cancel' => false,
-                'code_voucher' => '',
+                'id_voucher' => 1,
                 'created_at' => now(),
                 'updated_at' => now()
             ],
@@ -39,7 +39,7 @@ class BookingSeeder extends Seeder
                 'id_photographer' => 9,
                 'id_combo' => 1,
                 'is_cancel' => false,
-                'code_voucher' => '',
+                'id_voucher' => 1,
                 'created_at' => now(),
                 'updated_at' => now()
             ],
@@ -48,7 +48,7 @@ class BookingSeeder extends Seeder
                 'id_photographer' => 8,
                 'id_combo' => 4,
                 'is_cancel' => false,
-                'code_voucher' => '',
+                'id_voucher' => 1,
                 'created_at' => now(),
                 'updated_at' => now()
             ],
@@ -57,7 +57,7 @@ class BookingSeeder extends Seeder
                 'id_photographer' => 7,
                 'id_combo' => 5,
                 'is_cancel' => false,
-                'code_voucher' => '',
+                'id_voucher' => 1,
                 'created_at' => now(),
                 'updated_at' => now()
             ],
@@ -66,7 +66,7 @@ class BookingSeeder extends Seeder
                 'id_photographer' => 8,
                 'id_combo' => 1,
                 'is_cancel' => false,
-                'code_voucher' => '',
+                'id_voucher' => 1,
                 'created_at' => now(),
                 'updated_at' => now()
             ],
@@ -75,7 +75,7 @@ class BookingSeeder extends Seeder
                 'id_photographer' => 9,
                 'id_combo' => 2,
                 'is_cancel' => false,
-                'code_voucher' => '',
+                'id_voucher' => 1,
                 'created_at' => now(),
                 'updated_at' => now()
             ],
@@ -84,7 +84,7 @@ class BookingSeeder extends Seeder
                 'id_photographer' => 10,
                 'id_combo' => 3,
                 'is_cancel' => false,
-                'code_voucher' => '',
+                'id_voucher' => 1,
                 'created_at' => now(),
                 'updated_at' => now()
             ],
@@ -93,7 +93,7 @@ class BookingSeeder extends Seeder
                 'id_photographer' => 9,
                 'id_combo' => 5,
                 'is_cancel' => false,
-                'code_voucher' => '',
+                'id_voucher' => 1,
                 'created_at' => now(),
                 'updated_at' => now()
             ],

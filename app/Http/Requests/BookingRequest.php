@@ -26,9 +26,9 @@ class BookingRequest extends FormRequest
         return [
             'id_user' => 'required|int',
             'id_photographer' => 'required|int',
-            'is_cancel' => 'required',
-            'code_voucher' => 'required',
-            'id_combo' => 'required'
+            'is_cancel' => 'required|int',
+            'id_voucher' => 'required|int',
+            'id_combo' => 'required|int'
         ];
     }
 }

@@ -25,19 +25,15 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
-// checked
+/// 
 Route::post('/register','Api\UserController@register');
-// checked
 Route::post('/login','Api\UserController@login');
-// checked
 Route::get('/info','Api\UserController@userInfo')->middleware('auth:api');
 // Route::get('/checkLogin','Api\UserController@checkLogin');
 
 //Posts
-
+///
 Route::get('booking/index','Api\BookingController@index')->middleware('auth:api');
-
-
 Route::get('/booking/show/{id}','Api\BookingController@show')->middleware('auth:api');
 Route::post('/booking/store', 'Api\BookingController@store')->middleware('auth:api');
 Route::patch('/booking/update/{id}','Api\BookingController@update')->middleware('auth:api');

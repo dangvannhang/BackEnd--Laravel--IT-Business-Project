@@ -18,6 +18,12 @@ class VoucherSeeder extends Seeder
         //
         DB::table('voucher')->insert([
             [
+                'code' => 'nothing',
+                'description' => 'code test',
+                'count' => 0,
+                'denomination' => 0
+            ],
+            [
                 'code' => 'chaomung',
                 'description' => 'Day la ma giam gia danh cho nhung nguoi moi tham gia su dung ap, co gia tri len den 25% (Khong qua 100k).',
                 'count' => 20,

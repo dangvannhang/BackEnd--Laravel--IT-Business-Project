@@ -50,7 +50,7 @@ class UserController extends Controller
 
 
     public function photographer_popular() {
-
+        
 
     }
     public function photographer_recommendation() {

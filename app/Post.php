@@ -8,7 +8,7 @@ class Post extends Model
 {
 
     protected $fillable=[
-        'id_photographer','title','content','img',
+        'id_photographer','title','content','image',
     ];
 
     protected $primarykey ='id';

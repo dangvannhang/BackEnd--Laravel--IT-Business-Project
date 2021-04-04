@@ -9,24 +9,27 @@ use Carbon\Carbon;
 use App\Style;
 class PostController extends Controller
 {
-// Show all the posts
+
 
     public function index() {
         $post= Post::latest()->get();
+        return response()->json($post);
     }
 
+
+
 // post a new story
-    public function post(Request $request)
+    public function store(Request $request)
     {
         $post = Post::create([
-            'user_id' => $request->user_id,
+            'id_photographer' => $request->id_photographer,
             'title' => $request->title,
             'content' => $request->content,
             'image'=>$request->image,
-            'style_id' => $request->style_id,
-            'created_at'=>Carbon::now()->format('Y-m-d H:i:s')
+            'created_at'=>Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at'=>Carbon::now()->format('Y-m-d H:i:s'),
         ]);
-        return response()->json(['data'=>$post]);
+        return response()->json($post);
     }
 
 // update the post

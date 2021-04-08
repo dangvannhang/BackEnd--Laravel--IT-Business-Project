@@ -55,12 +55,11 @@ class PostController extends Controller
     }
 
 // deletes an post.
-    public function destroy(Post $post)
+    public function destroy($id)
     {
-        $status = $post->delete();
+        $post=Post::find($id);
+        $post->delete();
 
-        return response()->json([
-            'status' => $status
-        ]);
+        return response()->json(['Status'=>'Delete finish']);
     }
 }

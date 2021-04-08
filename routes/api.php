@@ -41,6 +41,6 @@ Route::get('/booking/show-cancel-booking','Api\BookingController@show_cancel_boo
 
 
 // API Posts
-Route::get('post/index','Api\PostController@index');
-Route::post('post/store','Api\PostController@store');
-Route::delete('post/destroy/{id}','Api\PostController@destroy');
+Route::get('post/index','Api\PostController@index')->middleware('auth:api');
+Route::post('post/store','Api\PostController@store')->middleware('auth:api');
+Route::delete('post/destroy/{id}','Api\PostController@destroy')->middleware('auth:api');

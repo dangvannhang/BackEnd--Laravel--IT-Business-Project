@@ -62,5 +62,12 @@ class UserController extends Controller
 
         return response()->json(['recommendation'=> $recommendation]);
     }
+
+
+    public function search_photographer (Request $request) {
+        $photographer = User::where('id_role',3)->get();
+
+        return response()->json(['result' => $photographer]);
+    }
     
 }

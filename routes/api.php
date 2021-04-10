@@ -51,3 +51,5 @@ Route::delete('post/destroy/{id}','Api\PostController@destroy')->middleware('aut
 Route::get('photographer/popular','Api\UserController@photographer_popular')->middleware('auth:api');
 Route::get('photographer/recommendation','Api\UserController@photographer_recommendation')->middleware('auth:api');
 
+// API search photographer
+Route::post('photographer/search','Api\UserController@search_photographer');

@@ -36,6 +36,7 @@ create table users(
 	id int auto_increment,
     username varchar(50),
 	email varchar(70),
+    nickname varchar(50),
     passwordd varchar(255),
     id_roles int,
     phone numeric,

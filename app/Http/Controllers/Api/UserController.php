@@ -49,13 +49,18 @@ class UserController extends Controller
     // }
 
 
+    // NOt 
     public function photographer_popular() {
         
-
-    }
-    public function photographer_recommendation() {
-
+        $popular = User::where('id_role',3)->get();
         
+        return response()->json(['popular'=>$popular]);
+    }
+
+    public function photographer_recommendation() {
+        $recommendation=User::where('id_role',3)->get();
+
+        return response()->json(['recommendation'=> $recommendation]);
     }
     
 }

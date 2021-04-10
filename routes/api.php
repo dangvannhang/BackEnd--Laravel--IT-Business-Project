@@ -44,3 +44,10 @@ Route::get('/booking/show-cancel-booking','Api\BookingController@show_cancel_boo
 Route::get('post/index','Api\PostController@index')->middleware('auth:api');
 Route::post('post/store','Api\PostController@store')->middleware('auth:api');
 Route::delete('post/destroy/{id}','Api\PostController@destroy')->middleware('auth:api');
+
+
+// API photographer, popular
+
+Route::get('photographer/popular','Api\UserController@photographer_popular');
+Route::get('photographer/recommendation','Api\UserController@photographer_recommendation');
+

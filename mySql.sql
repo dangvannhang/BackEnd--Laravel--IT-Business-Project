@@ -102,12 +102,13 @@ create table follow_styles(
     foreign key(id_style) references main_style(id)
 );
 
-create table wishlist(
+create table follow_photographer(
 	id int auto_increment,
     id_user int,
-    follow_photographer varchar(255),
+	id_photographer int,
     primary key(id),
-    foreign key(id_user) references users(id)
+    foreign key(id_user) references users(id),
+    foreign key(id_photographer) references users(id)
 );
 
 create table rating(

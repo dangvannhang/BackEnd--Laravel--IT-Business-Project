@@ -48,6 +48,6 @@ Route::delete('post/destroy/{id}','Api\PostController@destroy')->middleware('aut
 
 // API photographer, popular
 
-Route::get('photographer/popular','Api\UserController@photographer_popular');
-Route::get('photographer/recommendation','Api\UserController@photographer_recommendation');
+Route::get('photographer/popular','Api\UserController@photographer_popular')->middleware('auth:api');
+Route::get('photographer/recommendation','Api\UserController@photographer_recommendation')->middleware('auth:api');
 

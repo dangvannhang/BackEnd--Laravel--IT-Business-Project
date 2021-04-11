@@ -13,15 +13,35 @@ use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
-    public function register(RegisterRequest $request) {
-        $user = new User;
-        $user->fill($request->all());
-        $user->password = Hash::make($request->password);
-        $user->save();
 
-        return response()->json($user);
+    public function user_register(Request $request) {
+        $user = new User;
+        
+        $user -> username = $request -> username;
+        $user -> nickname = $request -> nickname;
+        $user -> password = Hash::make($request -> password);
+        $user -> id_role  = 2;
+        $user -> phone    = $request -> phone;
+        $user -> email    = $request -> email;
+        $user -> save();
+
+        return response()->json(['new_user' => $user]);
     }
-    
+
+    public function photographer_register(Request $request) {
+        $user = new User;
+        
+        $user -> username = $request -> username;
+        $user -> nickname = $request -> nickname;
+        $user -> password = Hash::make($request -> password);
+        $user -> id_role  = 3;
+        $user -> phone    = $request -> phone;
+        $user -> email    = $request -> email;
+        $user -> save();
+
+        return response()->json(['new_photographer' => $user]);
+    }
+
     public function login(Request $request) {
         if(Auth::attempt([
             'username' => $request->username,

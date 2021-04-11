@@ -26,9 +26,12 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 /// 
-Route::post('/register','Api\UserController@register');
+Route::post('/user/register','Api\UserController@user_register');
+Route::post('/photographer/register','Api\UserController@photographer_register');
+
 Route::post('/login','Api\UserController@login');
 Route::get('/info','Api\UserController@userInfo')->middleware('auth:api');
+
 
 /// API booking
 Route::get('booking/index','Api\BookingController@index')->middleware('auth:api');

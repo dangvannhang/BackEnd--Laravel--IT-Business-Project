@@ -122,6 +122,23 @@ create table rating(
     foreign key(id_photographer) references users(id)
 );
 
-
+create table detail_photographer(
+	id int auto_increment,
+    id_photographer int,
+    nick_name varchar(50),
+    short_description varchar(255),
+    address varchar(255),
+    limit_time varchar(100),
+    primary key(id),
+    foreign key(id_photographer) references users(id)
+);
+create table combo_photographer(
+	id int auto_increment,
+    id_combo int,
+    id_photographer int,
+    primary key(id),
+    foreign key(id_combo) references combo(id),
+    foreign key(id_photographer) references users(id)
+);
 
 

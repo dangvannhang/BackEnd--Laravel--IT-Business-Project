@@ -18,28 +18,26 @@ class UserController extends Controller
         $user = new User;
         
         $user -> username = $request -> username;
-        $user -> nickname = $request -> nickname;
         $user -> password = Hash::make($request -> password);
         $user -> id_role  = 2;
         $user -> phone    = $request -> phone;
         $user -> email    = $request -> email;
         $user -> save();
 
-        return response()->json(['new_user' => $user]);
+        return response()->json($user);
     }
 
     public function photographer_register(Request $request) {
         $user = new User;
         
         $user -> username = $request -> username;
-        $user -> nickname = $request -> nickname;
         $user -> password = Hash::make($request -> password);
         $user -> id_role  = 3;
         $user -> phone    = $request -> phone;
         $user -> email    = $request -> email;
         $user -> save();
 
-        return response()->json(['new_photographer' => $user]);
+        return response()->json($user);
     }
 
     public function login(Request $request) {
@@ -52,24 +50,15 @@ class UserController extends Controller
 
             return response()->json($user);
         }
-        return response()->json(['email' => 'sai ten truy cap hoac mat khau'], 401);
+        return response()->json(['email' => 'Sai ten truy cap hoac mat khau'], 401);
     }
 
     public function userInfo(Request $request) {
         return response()->json($request->user('api')); 
     }
 
-    // public function checkLogin() {
-
-    //     if (Auth::check()) {
-            
-    //         return response()->json(['status'=>'authenticated']);
-    //     }
-    //     return response()->json(['status'=>'unauthenticated']);
-    // }
 
 
-    // NOt 
     public function photographer_popular() {
         
         $popular = User::where('id_role',3)->get();
@@ -88,17 +77,15 @@ class UserController extends Controller
 
         $search = $request->input('search'); 
 
-        // $photographer = User::where('id_role',3)->get();
-
-        
-        // $photographer = User::where('nickname','LIKE','%'.$search.'%')
-        // ->orWhere('email','LIKE','%'.$search.'%')->get(); 
-
         $photographer = User::where('id_role',3)
         ->where('nickname','LIKE','%'.$search.'%')
         ->orWhere('id_role',3)->where('email','LIKE','%'.$search.'%')->get();
 
         return response()->json(['result' => $photographer]);
     }
+
+    
+
+
     
 }

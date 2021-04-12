@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\RegisterRequest;
 use App\Http\Requests\LoginRequest;
 use App\User;
+use App\Detail_Photographer;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 

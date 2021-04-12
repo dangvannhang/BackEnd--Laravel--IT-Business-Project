@@ -20,7 +20,7 @@ class DetailPhotographerSeeder extends Seeder
                 'address' => 'quan 4, xi gon',
                 'limit_time' => 'Tat ca cac ngay trong tuan',
                 'created_at' => now(),
-                'update_at' => now()
+                'updated_at' => now()
             ],
             [
                 'id_photographer' => 8,
@@ -29,7 +29,7 @@ class DetailPhotographerSeeder extends Seeder
                 'address' => 'quan cam, xi gon',
                 'limit_time' => 'Cuoi tuan',
                 'created_at' => now(),
-                'update_at' => now()
+                'updated_at' => now()
             ],
             [
                 'id_photographer' => 9,
@@ -38,7 +38,7 @@ class DetailPhotographerSeeder extends Seeder
                 'address' => 'Da nang city',
                 'limit_time' => 'Full time',
                 'created_at' => now(),
-                'update_at' => now()
+                'updated_at' => now()
             ],
             [
                 'id_photographer' => 10,
@@ -47,7 +47,7 @@ class DetailPhotographerSeeder extends Seeder
                 'address' => 'Thanh Pho Thu Duc, sai gon',
                 'limit_time' => 'Cuoi tuan va ngay le',
                 'created_at' => now(),
-                'update_at' => now()
+                'updated_at' => now()
             ],
         ]);
     }

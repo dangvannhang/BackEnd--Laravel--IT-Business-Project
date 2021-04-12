@@ -78,8 +78,7 @@ class UserController extends Controller
 
         $search = $request->input('search'); 
 
-        $photographer = Detail_Photographer::where('nickname','LIKE','%'.$search.'%')
-        ->orWhere('email','LIKE','%'.$search.'%')->get();
+        $photographer = Detail_Photographer::where('nickname','LIKE','%'.$search.'%')->get();
 
         return response()->json(['result' => $photographer]);
     }

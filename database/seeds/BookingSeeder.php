@@ -22,8 +22,6 @@ class BookingSeeder extends Seeder
                 'id_combo' => 2,
                 'is_cancel' => false,
                 'id_voucher' => 1,
-                'created_at' => now(),
-                'updated_at' => now()
             ],
             [
                 'id_user' => 3,
@@ -31,8 +29,6 @@ class BookingSeeder extends Seeder
                 'id_combo' => 4,
                 'is_cancel' => false,
                 'id_voucher' => 1,
-                'created_at' => now(),
-                'updated_at' => now()
             ],
             [
                 'id_user' => 4,
@@ -40,8 +36,6 @@ class BookingSeeder extends Seeder
                 'id_combo' => 1,
                 'is_cancel' => false,
                 'id_voucher' => 1,
-                'created_at' => now(),
-                'updated_at' => now()
             ],
             [
                 'id_user' => 5,
@@ -49,8 +43,6 @@ class BookingSeeder extends Seeder
                 'id_combo' => 4,
                 'is_cancel' => false,
                 'id_voucher' => 1,
-                'created_at' => now(),
-                'updated_at' => now()
             ],
             [
                 'id_user' => 6,
@@ -58,8 +50,6 @@ class BookingSeeder extends Seeder
                 'id_combo' => 5,
                 'is_cancel' => false,
                 'id_voucher' => 1,
-                'created_at' => now(),
-                'updated_at' => now()
             ],
             [
                 'id_user' => 3,
@@ -67,8 +57,6 @@ class BookingSeeder extends Seeder
                 'id_combo' => 1,
                 'is_cancel' => false,
                 'id_voucher' => 1,
-                'created_at' => now(),
-                'updated_at' => now()
             ],
             [
                 'id_user' => 5,
@@ -76,8 +64,6 @@ class BookingSeeder extends Seeder
                 'id_combo' => 2,
                 'is_cancel' => false,
                 'id_voucher' => 1,
-                'created_at' => now(),
-                'updated_at' => now()
             ],
             [
                 'id_user' => 6,
@@ -85,8 +71,6 @@ class BookingSeeder extends Seeder
                 'id_combo' => 3,
                 'is_cancel' => false,
                 'id_voucher' => 1,
-                'created_at' => now(),
-                'updated_at' => now()
             ],
             [
                 'id_user' => 2,
@@ -94,8 +78,6 @@ class BookingSeeder extends Seeder
                 'id_combo' => 5,
                 'is_cancel' => false,
                 'id_voucher' => 1,
-                'created_at' => now(),
-                'updated_at' => now()
             ],
         ]);
     }

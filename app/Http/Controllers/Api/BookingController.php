@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Booking;
+use App\Detail_Booking;
 use App\Http\Requests\BookingRequest;
 
 class BookingController extends Controller
@@ -34,9 +35,23 @@ class BookingController extends Controller
     public function store(BookingRequest $request)
     {
         //
-        $booking= new Booking;
-        $booking->fill($request->all());
-        $booking->save();
+        $booking = new Booking;
+        $booking -> id_user = $request -> id_user;
+        $booking -> id_photographer = $request -> id_photographer;
+        $booking -> id_combo = $request -> id_combo;
+        $booking -> is_cancel = $request -> is_cancel;
+        $booking -> id_voucher = $request -> id_voucher;
+        $booking -> save();
+
+        $id_booking = $booking->id;
+        $detail_booking = new Detail_Booking;
+        $detail_booking -> id_booking = $id_booking;
+        $detail_booking -> address = $request -> address;
+        $detail_booking -> start_time = $request -> start_time;
+        $detail_booking -> end_time = $request -> end_time;
+        $detail_booking -> price = $request -> price;
+
+        $detail_booking -> save();
         return response()->json($booking);
 
     }

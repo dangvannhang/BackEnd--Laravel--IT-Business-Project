@@ -54,8 +54,6 @@ create table booking(
     id_combo int,
     is_cancel boolean,
     id_voucher int,
-    create_date datetime,
-    update_date datetime,
     primary key(id),
     foreign key(id_user) references users(id),
     foreign key(id_photographer) references users(id),
@@ -71,6 +69,8 @@ create table booking_detail(
     start_time datetime,
     end_time datetime,
     price float,
+	create_date datetime,
+    update_date datetime,
     primary key(id),
     foreign key(id_booking) references booking(id)
 );

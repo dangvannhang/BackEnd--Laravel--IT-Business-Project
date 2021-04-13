@@ -126,4 +126,10 @@ class BookingController extends Controller
         return response()->json($booking);
     }
 
+
+    public function accept_booking() {
+
+    }
+    
+
 }

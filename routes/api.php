@@ -2,10 +2,11 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\Api\UserController;
 use App\Http\Controllers\Api\PostController;
-
-use app\Http\Controllers\Api\BookingController;
+use App\Http\Controllers\Api\BookingController;
+use App\Http\Controllers\Api\VoucherController;
 
 /*
 |--------------------------------------------------------------------------
@@ -55,4 +56,8 @@ Route::get('photographer/popular','Api\UserController@photographer_popular')->mi
 Route::get('photographer/recommendation','Api\UserController@photographer_recommendation')->middleware('auth:api');
 
 // API search photographer
-Route::post('photographer/search','Api\UserController@search_photographer');
+Route::post('photographer/search','Api\UserController@search_photographer')->middleware('auth:api');
+
+// API check voucher
+
+Route::post('user/check_voucher','Api\VoucherController@check_value_voucher');

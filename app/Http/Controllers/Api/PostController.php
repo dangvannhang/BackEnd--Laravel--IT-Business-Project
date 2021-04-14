@@ -62,4 +62,14 @@ class PostController extends Controller
 
         return response()->json(['Status'=>'Delete finish']);
     }
+
+    public function search_post(Request $request) {
+
+        $search_content = $request -> input('search');
+        
+        $post = Post::where('title','LIKE','%'.$search_content.'%')->get();
+
+        return response()->json(['result' => $post]);
+
+    }       
 }

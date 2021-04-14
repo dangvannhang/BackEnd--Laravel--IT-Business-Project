@@ -48,7 +48,7 @@ Route::get('/booking/show-cancel-booking','Api\BookingController@show_cancel_boo
 Route::get('post/index','Api\PostController@index')->middleware('auth:api');
 Route::post('post/store','Api\PostController@store')->middleware('auth:api');
 Route::delete('post/destroy/{id}','Api\PostController@destroy')->middleware('auth:api');
-
+Route::post('post/search','Api\PostController@search_post')->middleware('auth:api');
 
 // API photographer, popular
 
@@ -60,4 +60,4 @@ Route::post('photographer/search','Api\UserController@search_photographer')->mid
 
 // API check voucher
 
-Route::post('user/check_voucher','Api\VoucherController@check_value_voucher');
+Route::post('user/check_voucher','Api\VoucherController@check_value_voucher')->middleware('auth:api');

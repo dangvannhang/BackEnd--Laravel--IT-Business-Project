@@ -52,8 +52,8 @@ Route::post('post/search','Api\PostController@search_post')->middleware('auth:ap
 
 // API photographer, popular
 
-Route::get('photographer/popular','Api\UserController@photographer_popular')->middleware('auth:api');
-Route::get('photographer/recommendation','Api\UserController@photographer_recommendation')->middleware('auth:api');
+Route::get('photographer/popular','Api\UserController@photographer_popular');
+Route::get('photographer/recommendation','Api\UserController@photographer_recommendation');
 
 // API search photographer
 Route::post('photographer/search','Api\UserController@search_photographer')->middleware('auth:api');

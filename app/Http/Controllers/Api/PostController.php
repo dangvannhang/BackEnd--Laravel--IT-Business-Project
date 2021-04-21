@@ -70,6 +70,5 @@ class PostController extends Controller
         $post = Post::where('title','LIKE','%'.$search_content.'%')->get();
 
         return response()->json(['result' => $post]);
-
     }       
 }

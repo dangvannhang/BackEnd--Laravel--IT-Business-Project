@@ -25,7 +25,6 @@ class VoucherController extends Controller
             $check_voucher = Voucher::where('code',$code_voucher)->get();
             return response()->json($check_voucher);
             // return $check_voucher;
-
         }
 
     }

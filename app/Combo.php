@@ -12,7 +12,7 @@ class Combo extends Model
     
     
     protected $fillable=[
-        'name_style','descr','img','price'
+        'name_style','descr','img','price','id_photographer'
     ];
 
     protected $primarykey ='id';
@@ -24,4 +24,8 @@ class Combo extends Model
         return $this->belongsto('App\Booking');
     }
   
+    public function user() {
+        //-------------------------------, foreignkey, localkey
+        return $this->belongsTo('App\User');
+    }
 }

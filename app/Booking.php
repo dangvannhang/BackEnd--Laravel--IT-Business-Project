@@ -13,14 +13,15 @@ class Booking extends Model
 
 
     protected $fillable=[
-        'id_user','id_photographer','id_combo','is_cancel','id_voucher'
+        'id_customer','id_photographer','id_combo','is_cancel','id_voucher', 'start_time','end_time', 'price','booking_status'
+
     ];
 
 
 
     public function user()
     {
-        return $this-> beLongTo('App\User','id_user');
+        return $this-> beLongTo('App\User');
     }
 
     public function combo()

@@ -18,7 +18,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'username', 'email', 'password','id_role','phone'
+        'username', 'email', 'password','phone'
     ];
 
     /**
@@ -34,19 +34,28 @@ class User extends Authenticatable
     protected $table ='user';
 
 
-    public function role()
+    public function user_role()
     {
-        return $this->hasOne('App\Role','id_role');
+        return $this->hasMany('App\Role','id_user');
     }
+
 
 
     public function booking()
     {
-        return $this->hasMany('App\Booking',' id_user');
+        return $this->hasMany('App\Booking',' id_customer');
     }
-
+    
     public function post() {
         return $this->hasMany('App\Post','id_photographer');
+    }
+
+    public function customer() {
+        return $this->hasOne('App\Customer');
+    }
+
+    public function photographer() {
+        return $this->hasOne('App\Photographer');
     }
     
 }

@@ -9,16 +9,16 @@ class Role extends Model
     public $timestamps = false;
     
     
-    protected $fillable=[
-        'role','descr'
-    ];
 
     protected $primarykey ='id';
     protected $table ='role';
 
+    protected $fillable=[
+        'role','descr'
+    ];
 
-    public function user()
-    {
-        return $this->belongsTo('App\User');
-    }
+
+    public function user_role() {
+        return $this->hasMany('App\User_Role');
+    } 
 }

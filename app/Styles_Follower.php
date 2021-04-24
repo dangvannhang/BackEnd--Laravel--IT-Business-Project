@@ -4,10 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Follow_Style extends Model
+class StylesFollower extends Model
 {
     //
-    protected $table='follow_style';
+    protected $table='styles_follower';
     protected $primaryKey='id';
 
     protected $fillable=['id_user','follow_style'];

@@ -20,8 +20,6 @@ create table voucher(
     primary key(id)
 );
 
-
-
 create table users(
 	id int auto_increment,
     username varchar(50),
@@ -49,7 +47,6 @@ create table combo(
     foreign key(id_photographer) references users(id)
 );
 
-
 create table users_role(
 	id int auto_increment,
     id_user int,
@@ -63,11 +60,11 @@ create table users_role(
 
 create table customers(
 	id int auto_increment,
-    id_user int,
+    id_customer int,
     billing varchar(255),
     -- Cái này định là sẽ lưu lại cái tài khoản payment của app, để kiểu như người dùng có thể nạp card vào để dùng. 
     primary key(id),
-    foreign key(id_user) references users(id)
+    foreign key(id_customer) references users(id)
 );
 create table photographer(
 	id int auto_increment,
@@ -82,7 +79,7 @@ create table photographer(
 
 create table booking(
 	id int auto_increment,
-    id_user int,
+    id_customer int,
     id_photographer int,
     id_combo int,
     is_cancel boolean,
@@ -90,10 +87,11 @@ create table booking(
     start_time datetime,
     end_time datetime,
     price float,
+    booking_status varchar(1),
     created_at datetime,
     updated_at datetime,
     primary key(id),
-    foreign key(id_user) references users(id),
+    foreign key(id_customer) references users(id),
     foreign key(id_photographer) references users(id),
 	foreign key(id_combo) references combo(id),
     foreign key(id_voucher) references voucher(id)
@@ -119,18 +117,18 @@ create table main_style(
 );
 create table styles_follower(
 	id int auto_increment,
-    id_user int,
+    id_customer int,
     id_style int ,
     primary key(id),
-    foreign key(id_user) references users(id),
+    foreign key(id_customer) references users(id),
     foreign key(id_style) references main_style(id)
 );
 create table photography_followers(
 	id int auto_increment,
-    id_user int,
+    id_customer int,
 	id_photographer int,
     primary key(id),
-    foreign key(id_user) references users(id),
+    foreign key(id_customer) references users(id),
     foreign key(id_photographer) references users(id)
 );
 

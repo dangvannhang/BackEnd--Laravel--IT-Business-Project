@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFollowStyleTable extends Migration
+class CreateUserRoleTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateFollowStyleTable extends Migration
      */
     public function up()
     {
-        Schema::create('follow_style', function (Blueprint $table) {
+        Schema::create('user_role', function (Blueprint $table) {
             $table->id();
             $table->foreignId('id_user');
-            $table->foreignId('id_style');
+            $table->foreignId('id_role');
             $table->timestamps();
         });
     }
@@ -28,8 +28,6 @@ class CreateFollowStyleTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('follow_style');
+        Schema::dropIfExists('user_role');
     }
 }
-
-

@@ -13,25 +13,32 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             //
-            UserSeeder::class,
-            //
-            RoleSeeder::class,
-            //
-            VoucherSeeder::class,
-            //
-            PostSeeder::class,
+            // RoleSeeder::class,
             // 
-            FollowStyleSeeder::class,
+            // VoucherSeeder::class,
             //
-            MainStyleSeeder::class,
+            // UserSeeder::class,
             //
-            ComboSeeder::class,
+            // ComboSeeder::class,
+            //
+            // UserRoleSeeder::class,
+            //
+            // CustomerSeeder::class,
             // 
-            BookingSeeder::class,
+            // PhotographerSeeder::class,
+            // 
+            // BookingSeeder::class,
+            // 
+            // PostSeeder::class,
+            // 
+            // MainStyleSeeder::class,
 
-            DetailBookingSeeder::class,
+            // StylesFollowerSeeder::class,
 
-            DetailPhotographerSeeder::class,
+            // PhotographyFollowerSeeder::class
+
+             
+
         ]);
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateComboTable extends Migration
+class CreateCustomerTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreateComboTable extends Migration
      */
     public function up()
     {
-        Schema::create('combo', function (Blueprint $table) {
+        Schema::create('customer', function (Blueprint $table) {
             $table->id();
-            $table->string('name_style');
-            $table->string('description');
-            $table->string('image');
-            $table->bigInteger('price');
+            $table->foreignId('id_customer');
+            $table->string('billing');
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ class CreateComboTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('combo');
+        Schema::dropIfExists('customer');
     }
 }

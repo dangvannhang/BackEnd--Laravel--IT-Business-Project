@@ -19,11 +19,13 @@ class CreateUserTable extends Migration
         Schema::create('user', function (Blueprint $table) {
             $table->id();
             $table->string('username');
+            $table->string('email');
+            $table->string('first_name')->nullable();//
+            $table->string('last_name')->nullable();//
             $table->string('password');
-            $table->string('id_role');
-            $table->string('phone');
-            $table->string('email')->unique();
-            $table->rememberToken();
+            $table->string('phone')->nullable();//
+            $table->string('address')->nullable();//
+            $table->string('remember_token')->nullable();
             $table->timestamps();
         });
     }

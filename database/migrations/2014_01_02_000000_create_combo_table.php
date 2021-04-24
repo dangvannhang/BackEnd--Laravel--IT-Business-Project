@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDetailPhotographerTable extends Migration
+class CreateComboTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,13 @@ class CreateDetailPhotographerTable extends Migration
      */
     public function up()
     {
-        Schema::create('detail_photographer', function (Blueprint $table) {
+        Schema::create('combo', function (Blueprint $table) {
             $table->id();
             $table->foreignId('id_photographer');
-            $table->string('nickname');
-            $table->string('short_description');
-            $table->string('address');
-            $table->string('limit_time');
+            $table->string('name_style');
+            $table->string('description');
+            $table->string('image');
+            $table->bigInteger('price');
             $table->timestamps();
         });
     }
@@ -31,6 +31,6 @@ class CreateDetailPhotographerTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('detail_photographer');
+        Schema::dropIfExists('combo');
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateNotificationTable extends Migration
+class CreateStylesFollowerTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class CreateNotificationTable extends Migration
      */
     public function up()
     {
-        Schema::create('notification', function (Blueprint $table) {
+        Schema::create('styles_follower', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('id_user');
+            $table->foreignId('id_style');
             $table->timestamps();
         });
     }
@@ -26,6 +28,8 @@ class CreateNotificationTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('notification');
+        Schema::dropIfExists('styles_follower');
     }
 }
+
+

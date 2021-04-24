@@ -16,10 +16,10 @@ class CreatePhotographerTable extends Migration
         Schema::create('photographer', function (Blueprint $table) {
             $table->id();
             $table->foreignId('id_photographer');
-            $table->string('nickname');
-            $table->string('studio_address');
-            $table->string('limitation_time');
-            $table->string('descript');
+            $table->string('nickname')->nullable();
+            $table->string('studio_address')->nullable();
+            $table->string('limitation_time')->nullable();
+            $table->string('descript')->nullable();
             $table->timestamps();
         });
     }

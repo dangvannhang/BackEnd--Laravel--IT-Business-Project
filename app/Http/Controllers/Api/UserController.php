@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 use App\Http\Requests\RegisterRequest;
 use App\Http\Requests\LoginRequest;
 use App\User;
+use App\Customer;
+use App\User_Role;
+use App\Photographer;
 use App\Detail_Photographer;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
@@ -16,27 +19,49 @@ class UserController extends Controller
 {
 
     public function user_register(Request $request) {
+
         $user = new User;
-        
+    
         $user -> username = $request -> username;
         $user -> password = Hash::make($request -> password);
-        $user -> id_role  = 2;
-        $user -> phone    = $request -> phone;
         $user -> email    = $request -> email;
         $user -> save();
+
+        $id_customer = $user->id;
+        $customer = new Customer;
+        $customer -> id_customer = $id_customer;
+        $customer -> billing = $request->input('billing');
+        $customer ->save();
+
+        $user_role = new User_Role;
+        $user_role -> id_user = $id_customer;
+        $user_role -> id_role = 2;
+        $user_role -> save();
+
 
         return response()->json($user);
     }
 
+
+
     public function photographer_register(Request $request) {
+
         $user = new User;
         
         $user -> username = $request -> username;
         $user -> password = Hash::make($request -> password);
-        $user -> id_role  = 3;
-        $user -> phone    = $request -> phone;
         $user -> email    = $request -> email;
         $user -> save();
+
+        $id_photographer = $user->id;
+        $photographer = new Photographer;
+        $photographer -> id_photographer = $id_photographer;
+        $photographer ->save();
+
+        $user_role = new User_Role;
+        $user_role -> id_user = $id_photographer;
+        $user_role -> id_role = 3;
+        $user_role -> save();
 
         
         return response()->json($user);

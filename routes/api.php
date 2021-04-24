@@ -20,7 +20,6 @@ use App\Http\Controllers\Api\VoucherController;
 */
 
 
-
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
@@ -61,3 +60,5 @@ Route::post('photographer/search','Api\UserController@search_photographer')->mid
 // API check voucher
 
 Route::post('user/check_voucher','Api\VoucherController@check_value_voucher')->middleware('auth:api');
+
+

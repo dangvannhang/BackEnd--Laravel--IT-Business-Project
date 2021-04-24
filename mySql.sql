@@ -61,14 +61,14 @@ create table users_role(
 
 -- Phần table này liên quan đến billing, mà hiện tại chưa có thời gian nên thôi.
 
--- create table customers(
--- 	id int auto_increment,
---     id_user int,
---     billing varchar(255),
---     -- Cái này định là sẽ lưu lại cái tài khoản payment của app, để kiểu như người dùng có thể nạp card vào để dùng. 
---     primary key(id),
---     foreign key(id_user) references users(id)
--- );
+create table customers(
+	id int auto_increment,
+    id_user int,
+    billing varchar(255),
+    -- Cái này định là sẽ lưu lại cái tài khoản payment của app, để kiểu như người dùng có thể nạp card vào để dùng. 
+    primary key(id),
+    foreign key(id_user) references users(id)
+);
 create table photographer(
 	id int auto_increment,
     id_photographer int,
@@ -117,12 +117,13 @@ create table main_style(
     descr varchar(255),
     primary key(id)
 );
-create table follow_styles(
+create table styles_follower(
 	id int auto_increment,
     id_user int,
     id_style int ,
     primary key(id),
-    foreign key(id_user) references users(id)
+    foreign key(id_user) references users(id),
+    foreign key(id_style) references main_style(id)
 );
 create table photography_followers(
 	id int auto_increment,

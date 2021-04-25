@@ -32,26 +32,23 @@ class BookingController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(BookingRequest $request)
+    public function store(Request $request)
     {
         //
         $booking = new Booking;
-        $booking -> id_user = $request -> id_user;
+        $booking -> id_customer = $request -> id_customer;
         $booking -> id_photographer = $request -> id_photographer;
         $booking -> id_combo = $request -> id_combo;
         $booking -> is_cancel = $request -> is_cancel;
         $booking -> id_voucher = $request -> id_voucher;
+        $booking -> start_time = $request -> start_time;
+        $booking -> end_time = $request -> end_time;
+        $booking -> price = $request -> price;
+        $booking -> booking_status = $request -> booking_status;
+        $booking -> is_finish = $request -> is_finish;
+        $booking -> booking_address = $request -> booking_address;
         $booking -> save();
 
-        $id_booking = $booking->id;
-        $detail_booking = new Detail_Booking;
-        $detail_booking -> id_booking = $id_booking;
-        $detail_booking -> address = $request -> address;
-        $detail_booking -> start_time = $request -> start_time;
-        $detail_booking -> end_time = $request -> end_time;
-        $detail_booking -> price = $request -> price;
-
-        $detail_booking -> save();
         return response()->json($booking);
 
     }

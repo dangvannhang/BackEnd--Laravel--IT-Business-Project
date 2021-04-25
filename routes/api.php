@@ -25,17 +25,19 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
-// 
+///
 Route::post('/user/register','Api\UserController@user_register');
 Route::post('/photographer/register','Api\UserController@photographer_register');
-
 Route::post('/login','Api\UserController@login');
 Route::get('/info','Api\UserController@userInfo')->middleware('auth:api');
 
 
-/// API booking
+// API booking
+//
 Route::get('booking/index','Api\BookingController@index');
+//
 Route::post('/booking/show/{id}','Api\BookingController@show');
+
 Route::post('/booking/store', 'Api\BookingController@store');
 Route::patch('/booking/update/{id}','Api\BookingController@update');
 Route::delete('/booking/destroy/{id}','Api\BookingController@destroy');

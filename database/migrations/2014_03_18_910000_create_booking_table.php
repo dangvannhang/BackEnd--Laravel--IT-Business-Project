@@ -22,7 +22,7 @@ class CreateBookingTable extends Migration
             $table->foreignId('id_voucher');
             $table->string('start_time');
             $table->string('end_time');
-            $table->float('price');
+            $table->string('price');
             $table->integer('booking_status');
             $table->boolean('is_finish');
             $table->string('booking_address')->nullable();

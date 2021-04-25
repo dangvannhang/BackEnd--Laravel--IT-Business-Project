@@ -10,7 +10,6 @@ use App\User;
 use App\Customer;
 use App\User_Role;
 use App\Photographer;
-use App\Detail_Photographer;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -83,7 +82,7 @@ class UserController extends Controller
     }
 
     public function userInfo(Request $request) {
-        return response()->json($request->user('api')); 
+        return response()->json($request->user('api'));
     }
 
 
@@ -94,7 +93,8 @@ class UserController extends Controller
         $photographer =DB::table('user_role')
             ->where('id_role',3)
             ->join('user','user_role.id_user','=','user.id')
-            ->select('user.*','user_role.id_role')
+            ->join('photographer','user_role.id_user','=','photographer.id_photographer')
+            ->select('user.*','user_role.id_role','photographer.nickname','photographer.studio_address','photographer.limitation_time','photographer.descript')
             ->get();
 
         return response()->json($photographer);
@@ -106,7 +106,8 @@ class UserController extends Controller
         $photographer =DB::table('user_role')
             ->where('id_role',3)
             ->join('user','user_role.id_user','=','user.id')
-            ->select('user.*','user_role.id_role')
+            ->join('photographer','user_role.id_user','=','photographer.id_photographer')
+            ->select('user.*','user_role.id_role','photographer.nickname','photographer.studio_address','photographer.limitation_time','photographer.descript')
             ->get();
 
         return response()->json($photographer);

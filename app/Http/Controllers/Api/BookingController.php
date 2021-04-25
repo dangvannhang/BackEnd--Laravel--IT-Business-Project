@@ -39,13 +39,10 @@ class BookingController extends Controller
         $booking -> id_customer = $request -> id_customer;
         $booking -> id_photographer = $request -> id_photographer;
         $booking -> id_combo = $request -> id_combo;
-        $booking -> is_cancel = $request -> is_cancel;
         $booking -> id_voucher = $request -> id_voucher;
         $booking -> start_time = $request -> start_time;
         $booking -> end_time = $request -> end_time;
         $booking -> price = $request -> price;
-        $booking -> booking_status = $request -> booking_status;
-        $booking -> is_finish = $request -> is_finish;
         $booking -> booking_address = $request -> booking_address;
         $booking -> save();
 

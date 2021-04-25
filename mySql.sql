@@ -88,6 +88,7 @@ create table booking(
     end_time datetime,
     price float,
     booking_status varchar(1),
+    booking_address varchar(255),
     created_at datetime,
     updated_at datetime,
     primary key(id),

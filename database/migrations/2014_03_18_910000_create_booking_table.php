@@ -25,6 +25,7 @@ class CreateBookingTable extends Migration
             $table->float('price');
             $table->integer('booking_status');
             $table->boolean('is_finish');
+            $table->string('booking_address')->nullable();
             $table->timestamps();
         });
     }

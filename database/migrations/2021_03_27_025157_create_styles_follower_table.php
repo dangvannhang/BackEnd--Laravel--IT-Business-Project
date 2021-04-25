@@ -15,7 +15,7 @@ class CreateStylesFollowerTable extends Migration
     {
         Schema::create('styles_follower', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('id_user');
+            $table->foreignId('id_customer');
             $table->foreignId('id_style');
             $table->timestamps();
         });

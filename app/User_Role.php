@@ -17,4 +17,6 @@ class User_Role extends Model
     public function  role() {
         return $this->belongsToMany('App\Role','id_role');
     }
+
+    
 }

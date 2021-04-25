@@ -34,20 +34,20 @@ Route::get('/info','Api\UserController@userInfo')->middleware('auth:api');
 
 
 /// API booking
-Route::get('booking/index','Api\BookingController@index')->middleware('auth:api');
-Route::post('/booking/show/{id}','Api\BookingController@show')->middleware('auth:api');
+Route::get('booking/index','Api\BookingController@index');
+Route::post('/booking/show/{id}','Api\BookingController@show');
 Route::post('/booking/store', 'Api\BookingController@store');
-Route::patch('/booking/update/{id}','Api\BookingController@update')->middleware('auth:api');
-Route::delete('/booking/destroy/{id}','Api\BookingController@destroy')->middleware('auth:api');
-Route::get('/booking/cancel-booking/{id}','Api\BookingController@cancel_booking')->middleware('auth:api');
-Route::get('/booking/show-cancel-booking','Api\BookingController@show_cancel_booking')->middleware('auth:api');
+Route::patch('/booking/update/{id}','Api\BookingController@update');
+Route::delete('/booking/destroy/{id}','Api\BookingController@destroy');
+Route::get('/booking/cancel-booking/{id}','Api\BookingController@cancel_booking');
+Route::get('/booking/show-cancel-booking','Api\BookingController@show_cancel_booking');
 
 
 // API Posts
-Route::get('post/index','Api\PostController@index')->middleware('auth:api');
-Route::post('post/store','Api\PostController@store')->middleware('auth:api');
-Route::delete('post/destroy/{id}','Api\PostController@destroy')->middleware('auth:api');
-Route::post('post/search','Api\PostController@search_post')->middleware('auth:api');
+Route::get('post/index','Api\PostController@index');
+Route::post('post/store','Api\PostController@store');
+Route::delete('post/destroy/{id}','Api\PostController@destroy');
+Route::post('post/search','Api\PostController@search_post');
 
 // API photographer, popular
 
@@ -55,10 +55,10 @@ Route::get('photographer/popular','Api\UserController@photographer_popular');
 Route::get('photographer/recommendation','Api\UserController@photographer_recommendation');
 
 // API search photographer
-Route::post('photographer/search','Api\UserController@search_photographer')->middleware('auth:api');
+Route::post('photographer/search','Api\UserController@search_photographer');
 
 // API check voucher
 
-Route::post('user/check_voucher','Api\VoucherController@check_value_voucher')->middleware('auth:api');
+Route::post('user/check_voucher','Api\VoucherController@check_value_voucher');
 
 

@@ -13,6 +13,8 @@ use App\Photographer;
 use App\Detail_Photographer;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+
 
 
 class UserController extends Controller
@@ -87,16 +89,27 @@ class UserController extends Controller
 
 
     public function photographer_popular() {
+
+
+        $photographer =DB::table('user_role')
+            ->where('id_role',3)
+            ->join('user','user_role.id_user','=','user.id')
+            ->select('user.*','user_role.id_role')
+            ->get();
+
+        return response()->json($photographer);
         
-        $popular = User::where('id_role',3)->get();
-        
-        return response()->json(['popular'=>$popular]);
     }
 
     public function photographer_recommendation() {
-        $recommendation=User::where('id_role',3)->get();
 
-        return response()->json(['recommendation'=> $recommendation]);
+        $photographer =DB::table('user_role')
+            ->where('id_role',3)
+            ->join('user','user_role.id_user','=','user.id')
+            ->select('user.*','user_role.id_role')
+            ->get();
+
+        return response()->json($photographer);
     }
 
 

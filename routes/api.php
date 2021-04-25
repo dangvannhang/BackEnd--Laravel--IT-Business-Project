@@ -37,10 +37,12 @@ Route::get('/info','Api\UserController@userInfo')->middleware('auth:api');
 Route::get('booking/index','Api\BookingController@index');
 //
 Route::post('/booking/show/{id}','Api\BookingController@show');
-
+// 
 Route::post('/booking/store', 'Api\BookingController@store');
+
 Route::patch('/booking/update/{id}','Api\BookingController@update');
 Route::delete('/booking/destroy/{id}','Api\BookingController@destroy');
+
 Route::get('/booking/cancel-booking/{id}','Api\BookingController@cancel_booking');
 Route::get('/booking/show-cancel-booking','Api\BookingController@show_cancel_booking');
 

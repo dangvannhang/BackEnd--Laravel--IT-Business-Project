@@ -13,7 +13,7 @@ class Booking extends Model
 
 
     protected $fillable=[
-        'id_customer','id_photographer','id_combo','is_cancel','id_voucher', 'start_time','end_time', 'price','booking_status'
+        'id_customer','id_photographer','id_combo','id_voucher', 'start_time','end_time', 'price',
 
     ];
 

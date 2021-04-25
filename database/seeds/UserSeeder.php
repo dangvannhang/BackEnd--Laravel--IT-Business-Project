@@ -19,61 +19,71 @@ class UserSeeder extends Seeder
             [
                 'username' => 'piccine',
                 'password' => Hash::make('password'),
-                'email'    => 'piccine@gmail.com'
+                'email'    => 'piccine@gmail.com',
+                'avatar' => '../assets/Images/NAG/1.png'
             ],
             [
                 'username' => 'user1',
                 'password' => Hash::make('password'),
-                'email'    => 'user1@gmail.com'
+                'email'    => 'user1@gmail.com',
+                'avatar' => '../assets/Images/NAG/1.png'
             ],
 
             [
                 'username' => 'user2',
                 'password' => Hash::make('password'),
                 
-                'email'    => 'user2@gmail.com'
+                'email'    => 'user2@gmail.com',
+                'avatar' => '../assets/Images/NAG/1.png'
             ],
             [
                 'username' => 'user3',
                 'password' => Hash::make('password'),
                
-                'email'    => 'user3@gmail.com'
+                'email'    => 'user3@gmail.com',
+                'avatar' => '../assets/Images/NAG/1.png'
             ],
             [
                 'username' => 'user4',
                 'password' => Hash::make('password'),
                
-                'email'    => 'user4@gmail.com'
+                'email'    => 'user4@gmail.com',
+                'avatar' => '../assets/Images/NAG/1.png'
             ],
             [
                 'username' => 'user5',
                 'password' => Hash::make('password'),
                
-                'email'    => 'user5@gmail.com'
+                'email'    => 'user5@gmail.com',
+                'avatar' => '../assets/Images/NAG/1.png'
             ],
             [
                 'username' => 'photographer1',
                 'password' => Hash::make('password'),
                
-                'email'    => 'photographer1@gmail.com'
+                'email'    => 'photographer1@gmail.com',
+                'avatar' => '../assets/Images/NAG/1.png'
             ],
             [
                 'username' => 'photographer2',
                 'password' => Hash::make('password'),
                
-                'email'    => 'photographer2@gmail.com'
+                'email'    => 'photographer2@gmail.com',
+                'avatar' => '../assets/Images/NAG/1.png'
             ],
             [
                 'username' => 'photographer3',
                 'password' => Hash::make('password'),
                 
-                'email'    => 'photographer3@gmail.com'
+                'email'    => 'photographer3@gmail.com',
+                'avatar' => '../assets/Images/NAG/1.png'
             ],
             [
                 'username' => 'photographer4',
                 'password' => Hash::make('password'),
                
-                'email'    => 'photographer4@gmail.com'
+                'email'    => 'photographer4@gmail.com',
+                'avatar' => '../assets/Images/NAG/1.png'
             ]
 
         ]);

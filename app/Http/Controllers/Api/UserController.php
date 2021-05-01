@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\RegisterRequest;
 use App\Http\Requests\LoginRequest;
 use App\User;
+use App\Combo;
 use App\Customer;
 use App\User_Role;
 use App\Photographer;
@@ -123,6 +124,16 @@ class UserController extends Controller
         return response()->json(['result' => $photographer]);
     }
 
+
+    public function show_photographer_type($id) {
+        // $id_photographer = $request->input('id_photographer');
+        // return $request;
+
+        $combo_photographer = Combo::where('id_photographer',$id)->get();
+
+        return $combo_photographer;
+
+    }
     
 
 }

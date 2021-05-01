@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Combo extends Model
 {
-    use HasFactory;
    
     public $timestamps = false;
     

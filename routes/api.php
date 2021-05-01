@@ -66,3 +66,6 @@ Route::post('photographer/search','Api\UserController@search_photographer');
 Route::post('user/check_voucher','Api\VoucherController@check_value_voucher');
 
 
+// API combo
+
+Route::get('photographer/{id}/combo','Api\UserController@show_photographer_type');

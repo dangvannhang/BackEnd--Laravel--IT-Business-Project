@@ -57,6 +57,7 @@ Route::post('post/search','Api\PostController@search_post');
 
 Route::get('photographer/popular','Api\UserController@photographer_popular');
 Route::get('photographer/recommendation','Api\UserController@photographer_recommendation');
+Route::get('photographer/index','Api\UserController@photographer_total');
 
 // API search photographer
 Route::post('photographer/search','Api\UserController@search_photographer');
@@ -69,3 +70,7 @@ Route::post('user/check_voucher','Api\VoucherController@check_value_voucher');
 // API combo
 
 Route::get('photographer/{id}/combo','Api\UserController@show_photographer_type');
+
+
+// api customer
+Route::get('customer/index','Api\UserController@customer_total');

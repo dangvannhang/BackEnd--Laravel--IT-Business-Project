@@ -99,7 +99,6 @@ class UserController extends Controller
             ->get();
 
         return response()->json($photographer);
-        
     }
 
     public function photographer_recommendation() {
@@ -114,25 +113,43 @@ class UserController extends Controller
         return response()->json($photographer);
     }
 
-
     public function search_photographer (Request $request) {
 
         $search = $request->input('search'); 
-
         $photographer = Photographer::where('nickname','LIKE','%'.$search.'%')->get();
 
         return response()->json(['result' => $photographer]);
     }
 
-
     public function show_photographer_type($id) {
-        // $id_photographer = $request->input('id_photographer');
-        // return $request;
-
+  
         $combo_photographer = Combo::where('id_photographer',$id)->get();
-
         return $combo_photographer;
+    }
 
+
+    public function customer_total() {
+        $customer = DB::table('user_role')
+            ->where('id_role',2)
+            ->join('user','user_role.id_user','user.id')
+            ->join('customer','user_role.id','customer.id_customer')
+            ->select('user.*','customer.billing')
+            ->get();
+        
+            return response()->json($customer);
+
+    }
+    
+    public function photographer_total() {
+
+        $photographer =DB::table('user_role')
+            ->where('id_role',3)
+            ->join('user','user_role.id_user','=','user.id')
+            ->join('photographer','user_role.id_user','=','photographer.id_photographer')
+            ->select('user.*','user_role.id_role','photographer.nickname','photographer.studio_address','photographer.limitation_time','photographer.descript')
+            ->get();
+
+        return response()->json($photographer);
     }
     
 

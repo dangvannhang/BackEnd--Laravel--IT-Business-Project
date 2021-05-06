@@ -37,6 +37,47 @@ class CustomerSeeder extends Seeder
                 'id_customer' => 6,
                 'billing' => Str::random(10)
             ],
+            [
+                'id_customer' => 7,
+                'billing' => Str::random(10)
+            ],
+            [
+                'id_customer' => 8,
+                'billing' => Str::random(10)
+            ],
+            [
+                'id_customer' => 9,
+                'billing' => Str::random(10)
+            ],
+            [
+                'id_customer' => 10,
+                'billing' => Str::random(10)
+            ],
+            [
+                'id_customer' => 11,
+                'billing' => Str::random(10)
+            ],
+            [
+                'id_customer' => 12,
+                'billing' => Str::random(10)
+            ],
+            [
+                'id_customer' => 13,
+                'billing' => Str::random(10)
+            ],
+            [
+                'id_customer' => 14,
+                'billing' => Str::random(10)
+            ],
+            [
+                'id_customer' => 15,
+                'billing' => Str::random(10)
+            ],
+            [
+                'id_customer' => 16,
+                'billing' => Str::random(10)
+            ],
+
         ]);
     }
 }

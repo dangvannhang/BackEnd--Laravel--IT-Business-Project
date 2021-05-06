@@ -81,6 +81,9 @@ class UserController extends Controller
         }
         return response()->json(['email' => 'Sai ten truy cap hoac mat khau'], 401);
     }
+    // login for admin
+
+
 
     public function userInfo(Request $request) {
         return response()->json($request->user('api'));
@@ -151,6 +154,8 @@ class UserController extends Controller
 
         return response()->json($photographer);
     }
+
+
     
 
 }

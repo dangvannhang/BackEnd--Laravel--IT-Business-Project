@@ -13,21 +13,21 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             
-            // RoleSeeder::class,//
+            RoleSeeder::class,//
             
-            // VoucherSeeder::class,//
+            VoucherSeeder::class,//
             
-            // UserSeeder::class,//
+            UserSeeder::class,//
             
-            // ComboSeeder::class,//
+            ComboSeeder::class,//
             
-            // UserRoleSeeder::class,//
+            UserRoleSeeder::class,//
             
-            // CustomerSeeder::class,//
+            CustomerSeeder::class,//
             
-            // PhotographerSeeder::class,//
+            PhotographerSeeder::class,//
             // 
-            BookingSeeder::class,
+            // BookingSeeder::class,
             // 
             // PostSeeder::class,
             // 

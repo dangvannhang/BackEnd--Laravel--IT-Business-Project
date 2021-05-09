@@ -11,6 +11,8 @@ use App\Combo;
 use App\Customer;
 use App\User_Role;
 use App\Photographer;
+use App\Booking;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -155,7 +157,19 @@ class UserController extends Controller
         return response()->json($photographer);
     }
 
+    // dau tien la phai  loc cac booking da bi cancel //
+    // xong r loc cac booking theo thang
+    // xong r loc cac photographer
 
-    
-
+    public function ranking_photographer_perMonth($month) {
+        $photographer = DB::table('booking')
+            ->where('is_finish',1)
+            ->whereMonth('start_time','=',$month)
+            ->groupBy('id_photographer')
+            ->select('booking.id_photographer', DB::raw('count(booking.id_photographer) as total'))
+            ->orderByRaw('total DESC')
+            ->get();
+        
+        return response()->json($photographer);
+    }
 }

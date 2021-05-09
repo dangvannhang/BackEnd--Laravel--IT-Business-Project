@@ -74,3 +74,8 @@ Route::get('photographer/{id}/combo','Api\UserController@show_photographer_type'
 
 // api customer
 Route::get('customer/index','Api\UserController@customer_total');
+
+
+// api ranking of photographer
+
+Route::get('photographer/ranking/month/{month}','Api\UserController@ranking_photographer_perMonth');

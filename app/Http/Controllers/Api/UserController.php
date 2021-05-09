@@ -165,8 +165,9 @@ class UserController extends Controller
         $photographer = DB::table('booking')
             ->where('is_finish',1)
             ->whereMonth('start_time','=',$month)
-            ->groupBy('id_photographer')
-            ->select('booking.id_photographer', DB::raw('count(booking.id_photographer) as total'))
+            ->groupBy('user.username')
+            ->join('user','booking.id_photographer','=','user.id')
+            ->select('user.username', DB::raw('count(booking.id_photographer) as total'))
             ->orderByRaw('total DESC')
             ->get();
         

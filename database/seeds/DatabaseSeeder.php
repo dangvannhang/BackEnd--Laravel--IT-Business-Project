@@ -29,9 +29,9 @@ class DatabaseSeeder extends Seeder
             
             BookingSeeder::class,
             // 
-            // PostSeeder::class,
+            PostSeeder::class,
             // 
-            // MainStyleSeeder::class,
+            MainStyleSeeder::class,
 
             // StylesFollowerSeeder::class,
 

@@ -26,8 +26,8 @@ class DatabaseSeeder extends Seeder
             CustomerSeeder::class,//
             
             PhotographerSeeder::class,//
-            // 
-            // BookingSeeder::class,
+            
+            BookingSeeder::class,
             // 
             // PostSeeder::class,
             // 

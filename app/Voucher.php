@@ -11,7 +11,7 @@ class Voucher extends Model
 
     protected $primarykey='id';
 
-    protected $fillable=['name','code','descr','count','denomination'];
+    protected $fillable=['code','descr','count','denomination','start_time','end_time'];
 
     public function booking() {
         return $this->belongstoMany('App\Booking');

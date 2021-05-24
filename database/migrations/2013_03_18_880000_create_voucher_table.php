@@ -21,7 +21,7 @@ class CreateVoucherTable extends Migration
             $table->integer('denomination');
             $table->dateTime('start_time');
             $table->dateTime('end_time');
-            $table->boolean('is_expired');
+            $table->integer('is_expired')->default(0);
             $table->timestamps();
         });
     }

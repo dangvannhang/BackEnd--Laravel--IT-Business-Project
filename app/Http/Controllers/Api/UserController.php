@@ -46,8 +46,6 @@ class UserController extends Controller
         return response()->json($user);
     }
 
-
-
     public function photographer_register(Request $request) {
 
         $user = new User;
@@ -86,11 +84,9 @@ class UserController extends Controller
     // login for admin
 
 
-
     public function userInfo(Request $request) {
         return response()->json($request->user('api'));
     }
-
 
 
     public function photographer_popular() {

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Voucher;
+use App\Http\Requests\VoucherRequest;
 
 class VoucherController extends Controller
 {
@@ -27,5 +28,27 @@ class VoucherController extends Controller
             // return $check_voucher;
         }
 
+    }
+
+    public function create_voucher(VoucherRequest $request) {
+
+        $code = $request -> input('code');
+        $description = $request -> input('description');
+        $count = $request -> input('count');
+        $denomination = $request -> input('denomination');
+        $start_time = $request -> input('start_time');
+        $end_time = $request -> input('end_time');
+        
+        $new_voucher = new Voucher;
+        $new_voucher -> code = $code;
+        $new_voucher -> description = $description;
+        $new_voucher -> count = $count;
+        $new_voucher -> denomination = $denomination;
+        $new_voucher -> start_time = $start_time;
+        $new_voucher -> end_time = $end_time;
+
+        $new_voucher -> save();
+
+        return response()->json($new_voucher,201);
     }
 }

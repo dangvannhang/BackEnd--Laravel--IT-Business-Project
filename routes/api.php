@@ -79,3 +79,8 @@ Route::get('customer/index','Api\UserController@customer_total');
 // api ranking of photographer
 
 Route::get('photographer/ranking/month/{month}','Api\UserController@ranking_photographer_perMonth');
+
+
+// api create new voucher
+
+Route::post('voucher/new','Api\VoucherController@create_voucher');

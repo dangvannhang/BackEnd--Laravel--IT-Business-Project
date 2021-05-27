@@ -26,7 +26,7 @@ class VoucherRequest extends FormRequest
         return [
             //
 
-            'code' => 'required',
+            'code' => 'required|unique:voucher',
             'description' => 'required',
             'count' => 'required|int', // count so luong cua voucher
             'denomination' => 'required|int', // so phan tram duoc giam tren hoa don

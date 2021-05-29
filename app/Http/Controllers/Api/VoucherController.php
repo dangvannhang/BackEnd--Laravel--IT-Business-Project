@@ -39,16 +39,16 @@ class VoucherController extends Controller
         $start_time = $request -> input('start_time');
         $end_time = $request -> input('end_time');
 
-        $new_start_date = date('Y-m-d\TH-i',strtotime($start_time));
-        $new_end_date = date('Y-m-d\TH-i',strtotime($end_time));
+        $new_start_time = date('Y-m-d H:i:s',strtotime($start_time));
+        $new_end_time = date('Y-m-d H:i:s',strtotime($end_time));
         
         $new_voucher = new Voucher;
         $new_voucher -> code = $code;
         $new_voucher -> description = $description;
         $new_voucher -> count = $count;
         $new_voucher -> denomination = $denomination;
-        $new_voucher -> start_time = $new_start_date;
-        $new_voucher -> end_time = $new_end_date;
+        $new_voucher -> start_time = $new_start_time;
+        $new_voucher -> end_time = $new_end_time;
 
         $new_voucher -> save();
 

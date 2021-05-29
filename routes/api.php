@@ -84,3 +84,4 @@ Route::get('photographer/ranking/month/{month}','Api\UserController@ranking_phot
 // api create new voucher
 
 Route::post('voucher/new','Api\VoucherController@create_voucher');
+Route::get('voucher','Api\VoucherController@show_all_voucher');

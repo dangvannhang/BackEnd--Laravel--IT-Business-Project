@@ -39,7 +39,7 @@ class VoucherController extends Controller
         $start_time = $request -> input('start_time');
         $end_time = $request -> input('end_time');
 
-        $new_start_date = date('Y-m-d\TH-i',strtotime($start_time))
+        $new_start_date = date('Y-m-d\TH-i',strtotime($start_time));
         $new_end_date = date('Y-m-d\TH-i',strtotime($end_time));
         
         $new_voucher = new Voucher;

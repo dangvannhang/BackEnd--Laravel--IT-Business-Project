@@ -7,6 +7,7 @@ use App\Http\Controllers\Api\UserController;
 use App\Http\Controllers\Api\PostController;
 use App\Http\Controllers\Api\BookingController;
 use App\Http\Controllers\Api\VoucherController;
+use App\Http\Controllers\Api\RevenueController;
 
 /*
 |--------------------------------------------------------------------------
@@ -85,3 +86,7 @@ Route::get('photographer/ranking/month/{month}','Api\UserController@ranking_phot
 
 Route::post('voucher/new','Api\VoucherController@create_voucher');
 Route::get('voucher','Api\VoucherController@show_all_voucher');
+
+
+// api get revenue by month
+Route::get('revenue/month/{id}','Api\RevenueController@total_revenue_by_month');

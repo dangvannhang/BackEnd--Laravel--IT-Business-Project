@@ -130,9 +130,5 @@ class BookingController extends Controller
 
     }
 
-    //function show doanh thu cua app theo thang
-    public function total_revenue_by_month() {
-
-    }
-
+    
 }

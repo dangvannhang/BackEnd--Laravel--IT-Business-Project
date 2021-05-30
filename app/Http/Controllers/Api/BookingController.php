@@ -125,5 +125,14 @@ class BookingController extends Controller
 
     }
     
+    //funtion show toan bo doanh thu cua app
+    public function  total_revenue() {
+
+    }
+
+    //function show doanh thu cua app theo thang
+    public function total_revenue_by_month() {
+
+    }
 
 }

@@ -68,8 +68,8 @@ Route::post('user/check_voucher','Api\VoucherController@check_value_voucher');
 
 
 // API combo
-
-Route::get('photographer/{id}/combo','Api\UserController@show_photographer_type');
+// lấy ra hết các combo của một photographer //
+Route::get('photographer/combo/{id}','Api\UserController@show_photographer_type');
 
 
 // api customer

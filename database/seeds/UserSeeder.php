@@ -20,225 +20,225 @@ class UserSeeder extends Seeder
                 'username' => 'piccine',
                 'password' => Hash::make('password'),
                 'email'    => 'piccine@gmail.com',
-                'avatar' => '../assets/Images/NAG/1.png'
+                'avatar' => 'https://cdn4.vectorstock.com/i/thumb-large/52/38/avatar-icon-vector-11835238.jpg'
             ],
             [
-                'username' => 'user1',
+                'username' => 'myhanh11',
                 'password' => Hash::make('password'),
-                'email'    => 'user1@gmail.com',
-                'avatar' => '../assets/Images/NAG/1.png'
+                'email'    => 'buimyhanh11@gmail.com',
+                'avatar' => 'https://i.pinimg.com/originals/01/48/0f/01480f29ce376005edcbec0b30cf367d.jpg'
             ],
 
             [
-                'username' => 'user2',
+                'username' => 'vannhang',
                 'password' => Hash::make('password'),
                 
-                'email'    => 'user2@gmail.com',
-                'avatar' => '../assets/Images/NAG/1.png'
+                'email'    => 'dangvaannhang124@gmail.com',
+                'avatar' => 'https://scr.vn/wp-content/uploads/2020/07/h%C3%ACnh-n%E1%BB%81n-cute-5.jpg'
             ],
             [
-                'username' => 'user3',
+                'username' => 'vuthuat',
                 'password' => Hash::make('password'),
                
-                'email'    => 'user3@gmail.com',
-                'avatar' => '../assets/Images/NAG/1.png'
+                'email'    => 'havuthuat99@gmail.com',
+                'avatar' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRueErJaI-J4kzUBSmKWxyeosd4MhCGSFSzgg&usqp=CAU'
             ],
             [
-                'username' => 'user4',
+                'username' => 'kieuchi22',
                 'password' => Hash::make('password'),
                
-                'email'    => 'user4@gmail.com',
-                'avatar' => '../assets/Images/NAG/1.png'
+                'email'    => 'lethikieuchi@gmail.com',
+                'avatar' => 'https://cdn6.aptoide.com/imgs/9/e/9/9e9c999971201fff277dbf29f75fdaa5_icon.png'
             ],
             [
-                'username' => 'user5',
+                'username' => 'vanhung2k',
                 'password' => Hash::make('password'),
                
-                'email'    => 'user5@gmail.com',
-                'avatar' => '../assets/Images/NAG/1.png'
+                'email'    => 'vanhung2k@gmail.com',
+                'avatar' => 'https://st2.depositphotos.com/5934840/12040/v/950/depositphotos_120409546-stock-illustration-superhero-avatar-superman-comic-design.jpg'
             ],
 
             [
-                'username' => 'user6',
+                'username' => 'couple12',
                 'password' => Hash::make('password'),
                
-                'email'    => 'user6@gmail.com',
-                'avatar' => '../assets/Images/NAG/1.png'
+                'email'    => 'chuaconguoiyeu@gmail.com',
+                'avatar' => 'https://www.gamedesigning.org/wp-content/uploads/2016/12/Solid-Snake.png'
             ],
             [
-                'username' => 'user7',
+                'username' => 'leanh127',
                 'password' => Hash::make('password'),
                
-                'email'    => 'user7@gmail.com',
-                'avatar' => '../assets/Images/NAG/1.png'
+                'email'    => 'leanh127@gmail.com',
+                'avatar' => 'https://i.pinimg.com/originals/25/a9/15/25a915b52033609cdc542cee699f1c67.jpg'
             ],
             [
-                'username' => 'user8',
+                'username' => 'bigbaby',
                 'password' => Hash::make('password'),
                
-                'email'    => 'user8@gmail.com',
-                'avatar' => '../assets/Images/NAG/1.png'
+                'email'    => 'hohoaianh@gmail.com',
+                'avatar' => 'https://ugc.futurelearn.com/uploads/images/dd/07/header_dd07fced-95f4-47dd-ae45-3341001ed0d5.jpg'
             ],
             [
-                'username' => 'user9',
+                'username' => 'spud',
                 'password' => Hash::make('password'),
                
-                'email'    => 'user9@gmail.com',
-                'avatar' => '../assets/Images/NAG/1.png'
+                'email'    => 'duchuy2k@gmail.com',
+                'avatar' => 'https://pbs.twimg.com/profile_images/809104288551145472/nt4OOa05_400x400.jpg'
             ],
             [
-                'username' => 'user10',
+                'username' => 'snake',
                 'password' => Hash::make('password'),
                
-                'email'    => 'user10@gmail.com',
-                'avatar' => '../assets/Images/NAG/1.png'
+                'email'    => 'lehoaianh167@gmail.com',
+                'avatar' => 'https://minara.net/blog/wp-content/uploads/2019/10/Kinh-ho%C3%A0ng-tr%C6%B0%E1%BB%9Bc-th%E1%BB%A7-%C4%91o%E1%BA%A1n-m%E1%BB%9Bi-c%E1%BB%A7a-hacker-nh%E1%BA%B1m-chi%E1%BA%BFm-l%E1%BA%A5y-m%C3%A3-OTP-ng%C3%A2n-h%C3%A0ng-minara.net-1.png'
             ],
             [
-                'username' => 'user11',
+                'username' => 'smokin',
                 'password' => Hash::make('password'),
                
-                'email'    => 'user11@gmail.com',
-                'avatar' => '../assets/Images/NAG/1.png'
+                'email'    => 'huyle97@gmail.com',
+                'avatar' => 'https://thuviendohoa.vn/upload/images/items/hinh-anh-cau-thu-bong-da-sut-vo-le-png-448.webp'
             ],
             [
-                'username' => 'user12',
+                'username' => 'shogun',
                 'password' => Hash::make('password'),
                
-                'email'    => 'user12@gmail.com',
-                'avatar' => '../assets/Images/NAG/1.png'
+                'email'    => 'gia.tran235@gmail.com',
+                'avatar' => 'https://i.pinimg.com/originals/eb/2c/7a/eb2c7a39b3f38fd8640f6047600ac2ef.jpg'
             ],
             [
-                'username' => 'user13',
+                'username' => 'fanUI',
                 'password' => Hash::make('password'),
                
-                'email'    => 'user13@gmail.com',
-                'avatar' => '../assets/Images/NAG/1.png'
+                'email'    => 'lenhatran2k@gmail.com',
+                'avatar' => 'https://qph.fs.quoracdn.net/main-qimg-afab7fe7b541952df9624daf9f5202e0'
             ],
             [
-                'username' => 'user14',
+                'username' => 'chedaudo',
                 'password' => Hash::make('password'),
                
-                'email'    => 'user14@gmail.com',
-                'avatar' => '../assets/Images/NAG/1.png'
+                'email'    => 'chedaudo96@gmail.com',
+                'avatar' => 'https://img5.goodfon.com/wallpaper/nbig/7/a6/hero-wars-khroniki-khaosa-liuter-personazh-igra-rpg-game.jpg'
             ],
             [
-                'username' => 'user15',
+                'username' => 'pikachu',
                 'password' => Hash::make('password'),
                
-                'email'    => 'user15@gmail.com',
-                'avatar' => '../assets/Images/NAG/1.png'
+                'email'    => 'hanh.tran34@gmail.com',
+                'avatar' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSJPzuc0qoqvK-iK3Mti4PJgLz3jUk8RElYw&usqp=CAU'
             ],
 
 
 
             [
-                'username' => 'photographer1',
+                'username' => 'lamthanhtung',
                 'password' => Hash::make('password'),
                
-                'email'    => 'photographer1@gmail.com',
-                'avatar' => '../assets/Images/NAG/1.png'
+                'email'    => 'lamthanhtung@gmail.com',
+                'avatar' => 'https://specials-images.forbesimg.com/imageserve/5febd10c5fcbfae2bd93bab4/960x0.jpg?cropX1=0&cropX2=7952&cropY1=404&cropY2=5304'
             ],
             [
-                'username' => 'photographer2',
+                'username' => 'vansi97',
                 'password' => Hash::make('password'),
                
-                'email'    => 'photographer2@gmail.com',
-                'avatar' => '../assets/Images/NAG/1.png'
+                'email'    => 'vansi97@gmail.com',
+                'avatar' => 'https://anhducdigital.vn/media/news/0506_visaonhiepanhgiakhongduaanhgocchoban.jpg'
             ],
             [
-                'username' => 'photographer3',
+                'username' => 'vanhung35',
                 'password' => Hash::make('password'),
                 
-                'email'    => 'photographer3@gmail.com',
-                'avatar' => '../assets/Images/NAG/1.png'
+                'email'    => 'vanhung35@gmail.com',
+                'avatar' => 'https://www.vivosmartphone.vn/uploads/MANGOADS/Selfie%20nam/XOFCCdY.jpg'
             ],
             [
-                'username' => 'photographer4',
+                'username' => 'lequoc',
                 'password' => Hash::make('password'),
                
-                'email'    => 'photographer4@gmail.com',
-                'avatar' => '../assets/Images/NAG/1.png'
+                'email'    => 'lequoc@gmail.com',
+                'avatar' => 'https://sadesign.vn/wp-content/uploads/2020/11/kieu-chup-anh-dep-cho-nam-o-bai-bien.jpg'
             ],
 
 
             [
-                'username' => 'photographer5',
+                'username' => 'minhtien',
                 'password' => Hash::make('password'),
                
-                'email'    => 'photographer5@gmail.com',
+                'email'    => 'minhtien@gmail.com',
                 'avatar' => '../assets/Images/NAG/1.png'
             ],
             [
-                'username' => 'photographer6',
+                'username' => 'dinhtri',
                 'password' => Hash::make('password'),
                
-                'email'    => 'photographer6@gmail.com',
-                'avatar' => '../assets/Images/NAG/1.png'
+                'email'    => 'dinhtri@gmail.com',
+                'avatar' => 'https://trungdan.com/wp-content/uploads/2018/06/Top-10-kieu-tao-dang-chup-hinh-danh-cho-nam-dung-chat-9.jpg'
             ],
             [
-                'username' => 'photographer7',
+                'username' => 'vandinh',
                 'password' => Hash::make('password'),
                
-                'email'    => 'photographer7@gmail.com',
-                'avatar' => '../assets/Images/NAG/1.png'
+                'email'    => 'vandinh@gmail.com',
+                'avatar' => 'https://www.vivosmartphone.vn/uploads/MANGOADS/Selfie%20n%E1%BB%AF/nam%20%C4%91a%20phong%20c%C3%A1ch/3.jpg'
             ],
             [
-                'username' => 'photographer8',
+                'username' => 'vannhang',
                 'password' => Hash::make('password'),
                
-                'email'    => 'photographer8@gmail.com',
-                'avatar' => '../assets/Images/NAG/1.png'
+                'email'    => 'vannhang@gmail.com',
+                'avatar' => 'https://nhatthucmedia.com/images_upload/ac4469b300e9fcb7a5f8.jpg'
             ],
             [
-                'username' => 'photographer9',
+                'username' => 'hongmy',
                 'password' => Hash::make('password'),
                
-                'email'    => 'photographer9@gmail.com',
-                'avatar' => '../assets/Images/NAG/1.png'
+                'email'    => 'hongmy@gmail.com',
+                'avatar' => 'https://bazantravel.com/cdn/medias/uploads/51/51731-dia-diem-check-in-da-lat-700x569.jpg'
             ],
 
             
             [
-                'username' => 'photographer10',
+                'username' => 'saigon',
                 'password' => Hash::make('password'),
                
-                'email'    => 'photographer10@gmail.com',
-                'avatar' => '../assets/Images/NAG/1.png'
+                'email'    => 'chupanhsaigon@gmail.com',
+                'avatar' => 'https://innotour.vn/wp-content/uploads/2017/08/18198578_732413156962359_547708168768629159_n.jpg'
             ],
             [
-                'username' => 'photographer11',
+                'username' => 'thanhsang',
                 'password' => Hash::make('password'),
                
-                'email'    => 'photographer11@gmail.com',
-                'avatar' => '../assets/Images/NAG/1.png'
+                'email'    => 'thanhsang@gmail.com',
+                'avatar' => 'https://ocuaso.com/wp-content/uploads/2015/09/nghe-anh.jpg'
             ],
             [
-                'username' => 'photographer12',
+                'username' => 'gialam',
                 'password' => Hash::make('password'),
                
-                'email'    => 'photographer12@gmail.com',
-                'avatar' => '../assets/Images/NAG/1.png'
+                'email'    => 'gialam@gmail.com',
+                'avatar' => 'https://sohanews.sohacdn.com/2019/2/26/photo-1-15511711848442130762022.jpg'
             ],
             [
-                'username' => 'photographer13',
+                'username' => 'hoanghoa',
                 'password' => Hash::make('password'),
                
-                'email'    => 'photographer13@gmail.com',
-                'avatar' => '../assets/Images/NAG/1.png'
+                'email'    => 'hoanghoastudio@gmail.com',
+                'avatar' => 'https://i.bloganchoi.com/bloganchoi.com/wp-content/uploads/2020/08/nguyen-phuoc-nguyen11.jpg?fit=640%2C20000&quality=95&ssl=1'
             ],
             [
-                'username' => 'photographer14',
+                'username' => 'duchoa',
                 'password' => Hash::make('password'),
                
-                'email'    => 'photographer14@gmail.com',
-                'avatar' => '../assets/Images/NAG/1.png'
+                'email'    => 'duchoa@gmail.com',
+                'avatar' => 'https://nguoimauangel.com/wp-content/uploads/2016/10/14102184_1105259459555017_8077140966631371286_n.jpg'
             ],
             [
-                'username' => 'photographer15',
+                'username' => 'tandat',
                 'password' => Hash::make('password'),
                
-                'email'    => 'photographer15@gmail.com',
-                'avatar' => '../assets/Images/NAG/1.png'
+                'email'    => 'tandat@gmail.com',
+                'avatar' => 'https://lh3.googleusercontent.com/proxy/npihG3jjsx2dRnNMOVtUIcGeBYNh9lBLtj54Nk6ncCOJpu1jKGgEjDMpkIszP-ZHHMcmeBcPkmCmJnnggWanPNr6kVvrdbxvn0E-niQyHH7YQYYybj4'
             ],
 
         ]);

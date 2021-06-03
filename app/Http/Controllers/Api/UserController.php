@@ -118,12 +118,14 @@ class UserController extends Controller
 
         $search = $request->input('search');
 
-        $photographer = Photographer::where('nickname','LIKE',"%{$search}%")
-            ->orWhere('studio_address','LIKE',"%{$search}%")    
+        $photographer = Photographer::where('nickname','like',"%{$search}%")
+            ->orWhere('studio_address','like',"%{$search}%")    
             ->get();
 
         return response()->json(['count'=> $photographer->count(),'data' => $photographer]);
     }
+
+
 
     public function show_photographer_type($id) {
   

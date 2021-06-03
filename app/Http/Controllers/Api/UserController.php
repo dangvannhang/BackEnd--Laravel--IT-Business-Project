@@ -118,8 +118,7 @@ class UserController extends Controller
 
         $search = $request->input('search');
 
-        $photographer = Photographer::query()
-            ->where('nickname','LIKE',"%{$search}%")
+        $photographer = Photographer::where('nickname','LIKE',"%{$search}%")
             ->orWhere('studio_address','LIKE',"%{$search}%")    
             ->get();
 

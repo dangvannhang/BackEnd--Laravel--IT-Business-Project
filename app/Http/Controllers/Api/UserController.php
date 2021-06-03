@@ -117,7 +117,9 @@ class UserController extends Controller
     public function search_photographer (Request $request) {
 
         $search = $request->input('search'); 
-        $photographer = Photographer::where('nickname','LIKE','%'.$search.'%')->get();
+        $photographer = Photographer::where('nickname','LIKE','%'.$search.'%')
+            ->orwhere('studio_address','LIKE','%'.$search.'%')    
+            ->get();
 
         return response()->json(['result' => $photographer]);
     }

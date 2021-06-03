@@ -37,7 +37,7 @@ Route::get('/info','Api\UserController@userInfo')->middleware('auth:api');
 //
 Route::get('booking/index','Api\BookingController@index');
 //
-Route::post('/booking/show/{id}','Api\BookingController@show');
+Route::get('/booking/show/{id}','Api\BookingController@show');
 // 
 Route::post('/booking/store', 'Api\BookingController@store');
 

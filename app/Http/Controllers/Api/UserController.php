@@ -122,7 +122,7 @@ class UserController extends Controller
             ->orWhere('studio_address','LIKE',"%{$search}%")    
             ->get();
 
-        return response()->json(['result' => $photographer]);
+        return response()->json(['count'=> $photographer->count(),'data' => $photographer]);
     }
 
     public function show_photographer_type($id) {

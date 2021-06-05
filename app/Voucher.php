@@ -16,5 +16,7 @@ class Voucher extends Model
     public function booking() {
         return $this->belongstoMany('App\Booking');
     }
-    
+    public function photographer() {
+        return $this->belongsTo('App\Photographer');
+    }
 }

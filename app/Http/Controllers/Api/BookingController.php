@@ -5,8 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Booking;
-use App\Detail_Booking;
-use App\Http\Requests\BookingRequest;
+// use App\Http\Requests\BookingRequest;
 
 class BookingController extends Controller
 {
@@ -35,18 +34,25 @@ class BookingController extends Controller
     public function store(Request $request)
     {
         //
+        // nếu không có voucher thì truyền vào 0
+        
         $booking = new Booking;
         $booking -> id_customer = $request -> id_customer;
         $booking -> id_photographer = $request -> id_photographer;
         $booking -> id_combo = $request -> id_combo;
         $booking -> id_voucher = $request -> id_voucher;
+
+
         $booking -> start_time = $request -> start_time;
-        $booking -> end_time = $request -> end_time;
+        $booking -> time_booking = $request -> time_booking;
+
+
         $booking -> price = $request -> price;
         $booking -> booking_address = $request -> booking_address;
+
         $booking -> save();
 
-        return response()->json($booking);
+        return response()->json($booking,201);
 
     }
 

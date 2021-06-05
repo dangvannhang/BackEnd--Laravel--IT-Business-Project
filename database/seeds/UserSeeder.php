@@ -352,7 +352,7 @@ class UserSeeder extends Seeder
                 'avatar' => 'https://nguoimauangel.com/wp-content/uploads/2016/10/14102184_1105259459555017_8077140966631371286_n.jpg',
                 'first_name' => 'Hoa',
                 'last_name' => 'Lê',
-               'phone' => '0918203136',
+                'phone' => '0918203136',
                 'address' => 'Tan Binh, HCM',
             ],
             [

@@ -38,9 +38,12 @@ class VoucherController extends Controller
         $denomination = $request -> input('denomination');
         $start_time = $request -> input('start_time');
         $end_time = $request -> input('end_time');
-
+        
         $new_start_time = date('Y-m-d H:i:s',strtotime($start_time));
         $new_end_time = date('Y-m-d H:i:s',strtotime($end_time));
+
+
+        $new_id_photographer = $request->input('id_photographer');
         
         $new_voucher = new Voucher;
         $new_voucher -> code = $code;
@@ -49,7 +52,7 @@ class VoucherController extends Controller
         $new_voucher -> denomination = $denomination;
         $new_voucher -> start_time = $new_start_time;
         $new_voucher -> end_time = $new_end_time;
-
+        $new_voucher -> id_photographer = $new_id_photographer;
         $new_voucher -> save();
 
         return response()->json($new_voucher,201);

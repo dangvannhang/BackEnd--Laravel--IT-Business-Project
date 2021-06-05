@@ -70,8 +70,8 @@ class BookingSeeder extends Seeder
                 'id_photographer' => 22,
                 'id_combo' => 27,
                 'id_voucher' => 2,
-                'start_time' => '2021-03-11 06',
-                                'time_booking' => 1,
+                'start_time' => '2021-03-11',
+                'time_booking' => 1,
 
                 'price' => 450000,
                 'booking_status' => 2,

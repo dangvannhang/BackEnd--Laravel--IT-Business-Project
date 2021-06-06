@@ -145,11 +145,16 @@ class BookingController extends Controller
     public function accept_booking() {
 
     }
-    
-    //funtion show toan bo doanh thu cua app
-    public function  total_revenue() {
+
+    // hiển thị lịch sử booking của id_customer,
+    public function show_booking_photographer($id_photographer) {
 
     }
+
+
+    // hiển thị lích sử booking của id_photographer
+
+
 
     
 }

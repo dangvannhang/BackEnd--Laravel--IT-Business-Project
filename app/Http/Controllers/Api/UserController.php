@@ -118,8 +118,8 @@ class UserController extends Controller
 
         $search = $request->input('search');
 
-        $photographer = Photographer::where(DB::raw('LOWER(nickname)'), 'like', '%'.strtolower($search) . '%' )
-            ->orWhere(DB::raw('LOWER(studio_address)'), 'like', '%'.strtolower($search) . '%' )
+        $photographer = Photographer::where(DB::raw('LOWER(nickname)'), 'ilike', '%'.strtolower($search) . '%' )
+            ->orWhere(DB::raw('LOWER(studio_address)'), 'ilike', '%'.strtolower($search) . '%' )
             ->get();
 
         // $data = Country::where(DB::raw('LOWER(name)'), 'like',  strtolower($request->country) . '%')->limit(10)->get();

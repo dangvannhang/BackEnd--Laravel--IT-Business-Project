@@ -163,7 +163,15 @@ class BookingController extends Controller
 
     // hiển thị lích sử booking của id_photographer
     public function show_booking_customer($id_customer) {
+        $booking = DB::table('booking')
+            ->where('booking.id_customer',$id_customer)    
+            ->join('user','booking.id_customer', '=', 'user.id')
+            ->join('combo', 'booking.id_combo', '=', 'combo.id')
+            ->join('voucher','booking.id_voucher','=','voucher.id')
+            ->select('booking.id','user.first_name as photographer_name','combo.name_style','voucher.code','booking.start_time','booking.time_booking','booking.price','booking.booking_status','booking.is_finish','booking.booking_address')
+            ->get();
 
+        return response()->json(['count'=>count($booking),'data'=>$booking],200);
     }
 
 

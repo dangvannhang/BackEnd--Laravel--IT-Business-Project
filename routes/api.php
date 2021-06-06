@@ -38,6 +38,15 @@ Route::get('/info','Api\UserController@userInfo')->middleware('auth:api');
 Route::get('booking/index','Api\BookingController@index');
 //
 Route::get('/booking/show/{id}','Api\BookingController@show');
+
+
+// api show history booking cua photographer
+Route::get('booking/show/photographer/{id_photographer}','Api\BookingController@show_booking_photographer');
+
+
+// api show history booking cua customer
+Route::get('booking/show/customer/{id_customer}','Api\BookingController@show_booking_customer');
+
 // 
 Route::post('/booking/store', 'Api\BookingController@store');
 
@@ -46,6 +55,8 @@ Route::delete('/booking/destroy/{id}','Api\BookingController@destroy');
 
 Route::get('/booking/cancel-booking/{id}','Api\BookingController@cancel_booking');
 Route::get('/booking/show-cancel-booking','Api\BookingController@show_cancel_booking');
+
+
 
 
 // API Posts

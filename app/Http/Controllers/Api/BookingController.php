@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Booking;
+use Illuminate\Support\Facades\DB;
+
 // use App\Http\Requests\BookingRequest;
 
 class BookingController extends Controller
@@ -15,7 +17,7 @@ class BookingController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    // Hiển thị tất cả các lịch booking từ mới tới cũ, giới hạn show ra theo page, mỗi page chỉ có 5 booking schedule
+    // Hiển thị tất cả các lịch booking từ mới tới cũ
     public function index()
     {
         //
@@ -52,6 +54,7 @@ class BookingController extends Controller
 
         $booking -> save();
 
+
         return response()->json($booking,201);
 
     }
@@ -65,7 +68,19 @@ class BookingController extends Controller
     public function show($id)
     {
         //
-        $booking=Booking::find($id);
+        $booking=Booking::find($id)
+            ->join('user as pt','booking.id_photographer','=','pt.id')
+            ->join('user as ct','booking.id_customer', '=', 'ct.id')
+            ->join('combo', 'booking.id_combo', '=','combo.id')
+            ->join('voucher','booking.id_voucher','=','voucher.id')
+
+            ->select('booking.id','pt.first_name as photographer','ct.first_name as customer','combo.name_style','voucher.code','booking.start_time', 'booking.time_booking','booking.price','booking.booking_address')
+
+            ->first();
+
+        // ++++++++++++++++++++++++++++++++++++++++++++++++ doing
+
+
         return response()->json($booking);
     }
 

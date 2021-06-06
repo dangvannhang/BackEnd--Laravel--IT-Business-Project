@@ -13,7 +13,7 @@ class RevenueController extends Controller
     public function total_revenue_by_month($month) {
 
         $total_revenue = Booking::where('is_finish',1)
-            ->whereMonth('end_time',$month)
+            ->whereMonth('start_time',$month)
             ->select('price')
             ->get();
 

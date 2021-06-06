@@ -74,7 +74,7 @@ class BookingController extends Controller
             ->join('combo', 'booking.id_combo', '=','combo.id')
             ->join('voucher','booking.id_voucher','=','voucher.id')
 
-            ->select('booking.id','pt.first_name as photographer','ct.first_name as customer','combo.name_style','voucher.code','booking.start_time', 'booking.time_booking','booking.price','booking.booking_address')
+            ->select('booking.id','pt.first_name as photographer','ct.first_name as customer','combo.name_style','voucher.code','booking.start_time', 'booking.time_booking','booking.price','booking.booking_address','booking.booking_status')
 
             ->first();
 

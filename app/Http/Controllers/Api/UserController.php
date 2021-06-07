@@ -118,12 +118,15 @@ class UserController extends Controller
 
         $search = $request->input('search');
 
-        $photographer = Photographer::where(DB::raw('LOWER(nickname)'), 'like', '%'.strtolower($search) . '%' )
-            ->orWhere(DB::raw('LOWER(studio_address)'), 'like', '%'.strtolower($search) . '%' )
+        // $photographer = Photographer::where(DB::raw('LOWER(nickname)'), 'like', '%'.strtolower($search) . '%' )
+        //     ->orWhere(DB::raw('LOWER(studio_address)'), 'like', '%'.strtolower($search) . '%' )
+        //     ->get();
+
+        // return response()->json(['count'=> $photographer->count(),'data' => $photographer]);
+
+        $photographer = Photographer::where('LOWER(nickname)', 'like', '%'.strtolower($search) . '%' )
+            ->orWhere('LOWER(studio_address)', 'like', '%'.strtolower($search) . '%' )
             ->get();
-
-
-        // $data = Country::where(DB::raw('LOWER(name)'), 'like',  strtolower($request->country) . '%')->limit(10)->get();
 
         return response()->json(['count'=> $photographer->count(),'data' => $photographer]);
     }

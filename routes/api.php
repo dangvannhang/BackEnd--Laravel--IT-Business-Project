@@ -52,7 +52,12 @@ Route::get('booking/show/customer/{id_customer}','Api\BookingController@show_boo
 // 
 Route::post('/booking/store', 'Api\BookingController@store');
 
-Route::put('/booking/update/{id}','Api\BookingController@update');
+
+// ++++++++++++++++++++++++++++++++++++++++++++ doing +++++++++++++++++++++++=+++++++++++++++++++//
+Route::put('/booking/update/{id}','Api\BookingController@update_status');
+
+
+
 
 Route::delete('/booking/destroy/{id}','Api\BookingController@destroy');
 

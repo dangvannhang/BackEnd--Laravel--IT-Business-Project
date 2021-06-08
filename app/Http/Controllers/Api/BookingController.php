@@ -95,6 +95,23 @@ class BookingController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+    // ++++++++++++++++++++++++++++++++++++++++++++ doing +++++++++++++++++++++++=+++++++++++++++++++//
+    public function update_status(Request $request,$id) {
+        // $booking = Booking::find($request->id);
+        // $booking->booking_status = $request->booking_status;
+        // $booking->save();
+
+        // return $booking;
+
+        $booking = Booking::find($id);
+        $booking -> booking_status = $request->booking_status;
+        $booking ->save();
+
+        return response()->json($booking,200);
+     
+    }
+    
    
     /**
      * Remove the specified resource from storage.

@@ -50,7 +50,7 @@ Route::get('booking/show/customer/{id_customer}','Api\BookingController@show_boo
 // 
 Route::post('/booking/store', 'Api\BookingController@store');
 
-Route::patch('/booking/update/{id}','Api\BookingController@update');
+Route::put('/booking/update/{id}','Api\BookingController@update');
 Route::delete('/booking/destroy/{id}','Api\BookingController@destroy');
 
 Route::get('/booking/cancel-booking/{id}','Api\BookingController@cancel_booking');
@@ -101,3 +101,7 @@ Route::get('voucher','Api\VoucherController@show_all_voucher');
 
 // api get revenue by month
 Route::get('revenue/month/{id}','Api\RevenueController@total_revenue_by_month');
+
+
+// show all user
+Route::get('user/index','Api\UserController@show_user');

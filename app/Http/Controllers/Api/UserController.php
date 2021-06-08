@@ -126,11 +126,11 @@ class UserController extends Controller
         // return response()->json(['count'=> $photographer->count(),'data' => $photographer]);
 
         
-        $photographer = Photographer::where(DB::raw('LOWER(nickname)'), 'LIKE', `%$search%` )
-            ->orWhere(DB::raw(DB::raw('LOWER(studio_address)'), 'LIKE', `%$search%` )
-            ->get();
+        // $photographer = Photographer::where(DB::raw('LOWER(nickname)'), 'LIKE', `%$search%` )
+        //     ->orWhere(DB::raw(DB::raw('LOWER(studio_address)'), 'LIKE', `%$search%` )
+        //     ->get();
 
-        return response()->json(['count'=> $photographer->count(),'data' => $photographer]);
+        // return response()->json(['count'=> $photographer->count(),'data' => $photographer]);
 
     }
   
@@ -182,6 +182,11 @@ class UserController extends Controller
             ->get();
         
         return response()->json($photographer);
+    }
+
+    public function show_user() {
+        $users = User::all();
+        return response()->json(['count'=>$users->count(),'data'=>$users]);
     }
 
     

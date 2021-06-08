@@ -93,18 +93,16 @@ class BookingController extends Controller
      * @return \Illuminate\Http\Response
      */
     // update dùng ở đây để người dùng có thể thay đổi combo hay thời gian đặt vậy đó.
-    // public function update(Request $request, $id)
-    // {
-    //     //
-    //     $booking=Booking::findOrFail($id);
-    //     $booking->is_cancel='false';
-    //     $booking->code_voucher="Editbooking122";
-    //     $booking->save();
-    //     // hiện đang không thể $request tới các trường ở input, nên phải fix data để tét
-    //     // $booking->save();
+    public function update(Request $request, $id)
+    {
+        //
+        $booking=Booking::findOrFail($id);
+        $booking->is_cancel='false';
+        $booking->save();
 
-    //     return response()->json($booking);
-    // }
+
+        return response()->json($booking);
+    }
 
 
 

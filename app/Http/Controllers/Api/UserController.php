@@ -111,6 +111,7 @@ class UserController extends Controller
             ->select('user.*','user_role.id_role','photographer.nickname','photographer.studio_address','photographer.limitation_time','photographer.descript')
             ->get();
 
+
         return response()->json($photographer);
     }
 
@@ -124,13 +125,15 @@ class UserController extends Controller
 
         // return response()->json(['count'=> $photographer->count(),'data' => $photographer]);
 
-        $photographer = Photographer::where('LOWER(nickname)', 'like', '%'.strtolower($search) . '%' )
-            ->orWhere('LOWER(studio_address)', 'like', '%'.strtolower($search) . '%' )
+        
+        $photographer = Photographer::where(DB::raw('LOWER(nickname)'), 'LIKE', '%'.strtolower($search) . '%' )
+            ->orWhere(DB::raw('LOWER(studio_address)'), 'LIKE', '%'.strtolower($search) . '%' )
             ->get();
 
         return response()->json(['count'=> $photographer->count(),'data' => $photographer]);
-    }
 
+    }
+  
 
 
     public function show_photographer_type($id) {

@@ -9,6 +9,6 @@ UserSeeder
 + ms update created_at, updated_at cho thang 1, 2
 + đang seeding cho tháng 3,4,5,6
 
-// now
+// now 
 
 // will seeding booking

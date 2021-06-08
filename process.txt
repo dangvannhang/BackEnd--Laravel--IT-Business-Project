@@ -1,22 +1,5 @@
-## Process of folder backend.
-
-1. Documents
-  - code blog laravel
-    + https://www.youtube.com/watch?v=2yYix8dPUmM&t=1464s
-  - passport authentication  
-    + https://laravel.com/docs/7.x/passport
-  - validate data
-    + https://stackoverflow.com/questions/27279277/laravel-need-regex-to-validate-username-which-prevents-emoticon-but-allows-sp
-
-
-2. Done 
-  2.1 register, login with authenticate 
-  2.2 validate cho users khi register
-  3.1
-3. Doing
-  3.1 tạo các bảng mới về main_styles, follow_styles và model cho chúng
-  3.2 Chuyển trường nickname tại bảng user sang bảng detail_photographer, sửa lại model, migration, seeder liên quan tới fiel nickname.  
-4. Fixed
-  4.1 
-5. Fixing
-   1.
+# errors
+1. show booking, không show đúng booking dựa theo id
+- check có lấy được id chưa
+- check có lấy đúng được booking đó chưa
+- show booking đó ra được không

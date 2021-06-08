@@ -117,13 +117,13 @@ class UserController extends Controller
 
     public function search_photographer (Request $request) {
 
-        $search = $request->input('search');
+        // $search = $request->input('search');
 
-        $photographer = Photographer::where(DB::raw('LOWER(nickname)'), 'like', '%'.strtolower($search) . '%' )
-            ->orWhere(DB::raw('LOWER(studio_address)'), 'like', '%'.strtolower($search) . '%' )
-            ->get();
+        // $photographer = Photographer::where(DB::raw('LOWER(nickname)'), 'like', '%'.strtolower($search) . '%' )
+        //     ->orWhere(DB::raw('LOWER(studio_address)'), 'like', '%'.strtolower($search) . '%' )
+        //     ->get();
 
-        return response()->json(['count'=> $photographer->count(),'data' => $photographer]);
+        // return response()->json(['count'=> $photographer->count(),'data' => $photographer]);
 
     }
   

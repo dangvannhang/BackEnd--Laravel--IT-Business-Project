@@ -37,7 +37,9 @@ Route::get('/info','Api\UserController@userInfo')->middleware('auth:api');
 //
 Route::get('booking/index','Api\BookingController@index');
 //
-Route::get('/booking/show/{id}','Api\BookingController@show');
+// Route::get('/booking/show/{id}','Api\BookingController@show_booking');
+
+Route::get('booking/show/{id}','Api\BookingController@show_booking');
 
 
 // api show history booking cua photographer

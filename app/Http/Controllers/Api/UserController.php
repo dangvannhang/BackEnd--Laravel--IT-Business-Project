@@ -126,8 +126,8 @@ class UserController extends Controller
         // return response()->json(['count'=> $photographer->count(),'data' => $photographer]);
 
         
-        $photographer = Photographer::where('nickname', 'LIKE', `%$search%` )
-            ->orWhere('studio_address', 'LIKE', `%$search%` )
+        $photographer = Photographer::where(DB::raw('LOWER(nickname)'), 'LIKE', `%$search%` )
+            ->orWhere(DB::raw(DB::raw('LOWER(studio_address)'), 'LIKE', `%$search%` )
             ->get();
 
         return response()->json(['count'=> $photographer->count(),'data' => $photographer]);

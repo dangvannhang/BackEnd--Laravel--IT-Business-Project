@@ -3,3 +3,12 @@
 - check có lấy được id chưa
 - check có lấy đúng được booking đó chưa
 - show booking đó ra được không
+
+// dang seeding database
+UserSeeder 
++ ms update created_at, updated_at cho thang 1, 2
++ đang seeding cho tháng 3,4,5,6
+
+// now
+
+// will seeding booking

@@ -95,12 +95,15 @@ class BookingController extends Controller
     // update dùng ở đây để người dùng có thể thay đổi combo hay thời gian đặt vậy đó.
     public function update(Request $request, $id)
     {
-        $update_status = $request->input('update_status');
+        $update_status = $request->input('booking_status');
 
-        $booking=Booking::findOrFail($id)
-            ->update(['booking_status'=>$update_status])
+        $Update_booking=Booking::findOrFail($id)
+            ->update();
         
-        return response()->json($booking);
+        return response()->json($Update_booking,200);
+
+        // return $update_status;
+        // return $id;
     }
 
 

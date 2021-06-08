@@ -51,6 +51,7 @@ Route::get('booking/show/customer/{id_customer}','Api\BookingController@show_boo
 Route::post('/booking/store', 'Api\BookingController@store');
 
 Route::put('/booking/update/{id}','Api\BookingController@update');
+
 Route::delete('/booking/destroy/{id}','Api\BookingController@destroy');
 
 Route::get('/booking/cancel-booking/{id}','Api\BookingController@cancel_booking');

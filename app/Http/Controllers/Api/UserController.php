@@ -125,8 +125,6 @@ class UserController extends Controller
 
         return response()->json(['count'=> $photographer->count(),'data' => $photographer]);
 
-    
-
     }
   
 

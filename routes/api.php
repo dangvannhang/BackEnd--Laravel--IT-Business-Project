@@ -113,3 +113,8 @@ Route::get('revenue/month/{id}','Api\RevenueController@total_revenue_by_month');
 
 // show all user
 Route::get('user/index','Api\UserController@show_user');
+
+
+
+//push noti
+Route::post('notification','Api\BookingController@pushNotificationByTopic');

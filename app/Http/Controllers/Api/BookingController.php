@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Booking;
 use Illuminate\Support\Facades\DB;
-
+use App\Jobs\PushNotificationJob;
 // use App\Http\Requests\BookingRequest;
 
 class BookingController extends Controller
@@ -53,8 +53,9 @@ class BookingController extends Controller
         $booking -> booking_address = $request -> booking_address;
 
         $booking -> save();
-
-
+        $this->pushNotification('truyenf tham so vo day')
+        //này là gọi khác Controller
+        //  app('App\Http\Controllers\NotificationController')->pushNotification('order','',$title_2, $body_2, $devicesId_2); 
         return response()->json($booking,201);
 
     }
@@ -176,6 +177,31 @@ class BookingController extends Controller
             ->get();
 
         return response()->json(['count'=>count($booking),'data'=>$booking],200);
+    }
+
+    // giờ gọi function này rồi truyền vô mấy biến ni là đc
+     public function pushNotification ($type, $value, $title, $body, $token) {
+        PushNotificationJob::dispatch('sendBatchNotificationToken', [
+            $token,
+            [
+                'type' => $type,
+                'title' => $title,
+                'body' => $body,
+                'value' => $value,
+            ],
+        ]);
+        return response()->json('success',200);
+    }
+
+    //push noti
+     public function pushNotificationByTopic () {
+        PushNotificationJob::dispatch('sendBatchNotification', [
+            [
+                'topicName' => 'test',
+                'title' => 'Tài xế đã nhận đơn hàng của bạn',
+                'body' => 'Call tài xế ngay',
+            ],
+        ]);
     }
 
 

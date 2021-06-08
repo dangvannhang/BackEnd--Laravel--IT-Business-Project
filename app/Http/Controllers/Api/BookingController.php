@@ -68,23 +68,23 @@ class BookingController extends Controller
     public function show_booking($id)
     {
         //
-        $booking=Booking::find($id);
-            // ->join('user as pt','booking.id_photographer','=','pt.id')
-            // ->join('user as ct','booking.id_customer', '=', 'ct.id')
-            // ->join('combo', 'booking.id_combo', '=','combo.id')
-            // ->join('voucher','booking.id_voucher','=','voucher.id')
+        $find_booking=DB::table('booking')
+            ->where('booking.id',$id)
+            ->join('user as pt','booking.id_photographer','=','pt.id')
+            ->join('user as ct','booking.id_customer', '=', 'ct.id')
+            ->join('combo', 'booking.id_combo', '=','combo.id')
+            ->join('voucher','booking.id_voucher','=','voucher.id')
 
-            // ->select('booking.id','pt.first_name as photographer_name','ct.first_name as customer_name','combo.name_style','voucher.code','booking.start_time', 'booking.time_booking','booking.price','booking.booking_address','booking.booking_status','booking.is_finish')
-
-            // ->join('user', 'booking.id_photographer','=','user.id')
+            ->select('booking.id','pt.first_name as photographer_name','ct.first_name as customer_name','combo.name_style','voucher.code','booking.start_time', 'booking.time_booking','booking.price','booking.booking_address','booking.booking_status','booking.is_finish')
             // ->select('booking.id')
 
-            // ->first();
+            ->first();
 
         // ++++++++++++++++++++++++++++++++++++++++++++++++ doing
 
 
-        return response()->json($booking, 200);
+        return response()->json($find_booking, 200);
+
     }
 
 
@@ -95,23 +95,7 @@ class BookingController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    // update dùng ở đây để người dùng có thể thay đổi combo hay thời gian đặt vậy đó.
-    // public function update(Request $request, $id)
-    // {
-    //     $update_status = $request->input('booking_status');
-
-    //     $Update_booking=Booking::findOrFail($id)
-    //         ->update();
-        
-    //     return response()->json($Update_booking,200);
-
-    //     // return $update_status;
-    //     // return $id;
-    // }
-
-
-
-
+   
     /**
      * Remove the specified resource from storage.
      *

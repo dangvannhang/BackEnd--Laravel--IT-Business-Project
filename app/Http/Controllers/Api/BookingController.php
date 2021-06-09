@@ -53,7 +53,7 @@ class BookingController extends Controller
         $booking -> booking_address = $request -> booking_address;
 
         $booking -> save();
-        $this->pushNotification('truyenf tham so vo day')
+        // $this->pushNotification('truyenf tham so vo day');
         //này là gọi khác Controller
         //  app('App\Http\Controllers\NotificationController')->pushNotification('order','',$title_2, $body_2, $devicesId_2); 
         return response()->json($booking,201);

@@ -10,5 +10,5 @@ UserSeeder
 + đang seeding cho tháng 3,4,5,6
 
 // now 
-
+// coding show customer, photo create every month
 // will seeding booking

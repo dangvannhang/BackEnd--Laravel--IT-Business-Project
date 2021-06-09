@@ -149,7 +149,14 @@ class UserController extends Controller
     }
 
     public function customer_register_by_month($month) {
+        $customer = User_Role::where('id_role',2)
+            ->whereMonth('user_role.created_at','=',$month)
+
+            ->join('user','user_role.id_user','=','user.id')
+            ->select('user.username','user.first_name','user.last_name','user.email','user.phone','user.address')
+            ->get();
         
+        return response()->json(['count'=> count($customer),'data'=>$customer]);
     }
     
     public function photographer_total() {
@@ -162,6 +169,16 @@ class UserController extends Controller
             ->get();
 
         return response()->json($photographer);
+    }
+    public function photographer_register_by_month($month) {
+        $photographer = User_Role::where('id_role',3)
+            ->whereMonth('user_role.created_at','=',$month)
+
+            ->join('user','user_role.id_user','=','user.id')
+            ->select('user.username','user.first_name','user.last_name','user.email','user.phone','user.address')
+            ->get();
+        
+        return response()->json(['count'=> count($photographer),'data'=>$photographer]);
     }
 
     // dau tien la phai  loc cac booking da bi cancel //

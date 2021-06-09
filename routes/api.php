@@ -31,16 +31,14 @@ Route::post('/user/register','Api\UserController@user_register');
 Route::post('/photographer/register','Api\UserController@photographer_register');
 Route::post('/login','Api\UserController@login');
 Route::get('/info','Api\UserController@userInfo')->middleware('auth:api');
+Route::get('user/show/register/month/{month}','Api\UserController@customer_register_by_month');
+Route::get('photographer/show/register/month/{month}','Api\UserController@photographer_register_by_month');
 
 
 // API booking
 //
 Route::get('booking/index','Api\BookingController@index');
-//
-// Route::get('/booking/show/{id}','Api\BookingController@show_booking');
-
 Route::get('booking/show/{id}','Api\BookingController@show_booking');
-
 
 // api show history booking cua photographer
 Route::get('booking/show/photographer/{id_photographer}','Api\BookingController@show_booking_photographer');
@@ -51,16 +49,8 @@ Route::get('booking/show/customer/{id_customer}','Api\BookingController@show_boo
 
 // 
 Route::post('/booking/store', 'Api\BookingController@store');
-
-
-// ++++++++++++++++++++++++++++++++++++++++++++ doing +++++++++++++++++++++++=+++++++++++++++++++//
 Route::put('/booking/update/{id}','Api\BookingController@update_status');
-
-
-
-
 Route::delete('/booking/destroy/{id}','Api\BookingController@destroy');
-
 Route::get('/booking/cancel-booking/{id}','Api\BookingController@cancel_booking');
 Route::get('/booking/show-cancel-booking','Api\BookingController@show_cancel_booking');
 

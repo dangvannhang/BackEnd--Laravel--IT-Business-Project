@@ -31,7 +31,7 @@ Route::post('/user/register','Api\UserController@user_register');
 Route::post('/photographer/register','Api\UserController@photographer_register');
 Route::post('/login','Api\UserController@login');
 Route::get('/info','Api\UserController@userInfo')->middleware('auth:api');
-Route::get('user/show/register/month/{month}','Api\UserController@customer_register_by_month');
+Route::get('customer/show/register/month/{month}','Api\UserController@customer_register_by_month');
 Route::get('photographer/show/register/month/{month}','Api\UserController@photographer_register_by_month');
 
 

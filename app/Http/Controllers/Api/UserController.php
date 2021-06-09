@@ -139,9 +139,9 @@ class UserController extends Controller
     public function customer_total() {
         $customer = DB::table('user_role')
             ->where('id_role',2)
-            ->join('user','user_role.id_user','user.id')
-            ->join('customer','user_role.id','customer.id_customer')
-            ->select('user.*','customer.billing')
+            ->join('user','user_role.id_user','=','user.id')
+            // ->join('customer','user_role.id','=','customer.id_customer')
+            ->select('user.*')
             ->get();
         
             return response()->json($customer);
@@ -164,8 +164,9 @@ class UserController extends Controller
         $photographer =DB::table('user_role')
             ->where('id_role',3)
             ->join('user','user_role.id_user','=','user.id')
-            ->join('photographer','user_role.id_user','=','photographer.id_photographer')
-            ->select('user.*','user_role.id_role','photographer.nickname','photographer.studio_address','photographer.limitation_time','photographer.descript')
+            // ->join('photographer','user_role.id_user','=','photographer.id_photographer')
+            // ->select('user.*','user_role.id_role','photographer.nickname','photographer.studio_address','photographer.limitation_time','photographer.descript')
+            ->select('user.*','user_role.id_role')
             ->get();
 
         return response()->json($photographer);

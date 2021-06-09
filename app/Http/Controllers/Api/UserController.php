@@ -147,6 +147,10 @@ class UserController extends Controller
             return response()->json($customer);
 
     }
+
+    public function customer_register_by_month($month) {
+        
+    }
     
     public function photographer_total() {
 

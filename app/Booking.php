@@ -9,7 +9,6 @@ class Booking extends Model
     
     protected $table ='booking';
     protected $primarykey ='id';
-    public $timestamps = false;
 
 
     protected $fillable=[

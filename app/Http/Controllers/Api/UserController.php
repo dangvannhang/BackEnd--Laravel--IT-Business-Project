@@ -182,18 +182,16 @@ class UserController extends Controller
         return response()->json(['count'=> count($photographer),'data'=>$photographer]);
     }
 
-    // dau tien la phai  loc cac booking da bi cancel //
-    // xong r loc cac booking theo thang
-    // xong r loc cac photographer
-
     public function ranking_photographer_perMonth($month) {
         $photographer = DB::table('booking')
             ->where('is_finish',1)
             ->whereMonth('start_time','=',$month)
-            ->groupBy('user.username')
             ->join('user','booking.id_photographer','=','user.id')
-            ->select('user.username', DB::raw('count(booking.id_photographer) as total'))
-            ->orderByRaw('total DESC')
+            ->join('photographer','booking.id_photographer','=','photographer.id_photographer')
+            ->groupBy('user.username','user.first_name','user.last_name','user.phone','photographer.studio_address','user.email','user.phone')
+            ->select('user.username', DB::raw('count(booking.id_photographer) as total_booking'),'user.first_name','user.last_name','photographer.studio_address','user.email as photographer_email','user.phone')
+            ->orderByRaw('total_booking DESC')
+
             ->get();
         
         return response()->json($photographer);

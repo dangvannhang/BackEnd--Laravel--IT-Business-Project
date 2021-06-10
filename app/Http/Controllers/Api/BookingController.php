@@ -8,6 +8,9 @@ use App\Booking;
 use Illuminate\Support\Facades\DB;
 use App\Jobs\PushNotificationJob;
 // use App\Http\Requests\BookingRequest;
+use App\Jobs\SendEmail;
+use Mailgun\Mailgun;
+
 
 class BookingController extends Controller
 {
@@ -56,6 +59,14 @@ class BookingController extends Controller
         // $this->pushNotification('truyenf tham so vo day');
         //này là gọi khác Controller
         //  app('App\Http\Controllers\NotificationController')->pushNotification('order','',$title_2, $body_2, $devicesId_2); 
+
+        // $message = [
+        //     'title' => 'title',
+        //     'body' => 'body'
+        // ];
+
+        // SendEmail::dispatch($message);
+
         return response()->json($booking,201);
 
     }
